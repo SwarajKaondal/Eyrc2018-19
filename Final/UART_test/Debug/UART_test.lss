@@ -1,0 +1,3021 @@
+
+UART_test.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000004  00800200  000012ce  00001362  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000012ce  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000066  00800204  00800204  00001366  2**0
+                  ALLOC
+  3 .stab         000006e4  00000000  00000000  00001368  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000085  00000000  00000000  00001a4c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000080  00000000  00000000  00001ad8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000012ba  00000000  00000000  00001b58  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000002d5  00000000  00000000  00002e12  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000007b2  00000000  00000000  000030e7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000238  00000000  00000000  0000389c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000002c3  00000000  00000000  00003ad4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000c90  00000000  00000000  00003d97  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 72 00 	jmp	0xe4	; 0xe4 <__ctors_end>
+       4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+       8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+       c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      10:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      14:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      18:	0c 94 bc 04 	jmp	0x978	; 0x978 <__vector_6>
+      1c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      20:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      24:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      28:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      2c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      30:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      34:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      38:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      3c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      40:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      44:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      48:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      4c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      50:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      54:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      58:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      5c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      60:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      64:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      68:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      6c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      70:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      74:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      78:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      7c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      80:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      84:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      88:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      8c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      90:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      94:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      98:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      9c:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      a0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      a4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      a8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      ac:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      b0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      b4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      b8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      bc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      c0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      c4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      c8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      cc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      d0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      d4:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      d8:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      dc:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+      e0:	0c 94 93 00 	jmp	0x126	; 0x126 <__bad_interrupt>
+
+000000e4 <__ctors_end>:
+      e4:	11 24       	eor	r1, r1
+      e6:	1f be       	out	0x3f, r1	; 63
+      e8:	cf ef       	ldi	r28, 0xFF	; 255
+      ea:	d1 e2       	ldi	r29, 0x21	; 33
+      ec:	de bf       	out	0x3e, r29	; 62
+      ee:	cd bf       	out	0x3d, r28	; 61
+      f0:	00 e0       	ldi	r16, 0x00	; 0
+      f2:	0c bf       	out	0x3c, r16	; 60
+
+000000f4 <__do_copy_data>:
+      f4:	12 e0       	ldi	r17, 0x02	; 2
+      f6:	a0 e0       	ldi	r26, 0x00	; 0
+      f8:	b2 e0       	ldi	r27, 0x02	; 2
+      fa:	ee ec       	ldi	r30, 0xCE	; 206
+      fc:	f2 e1       	ldi	r31, 0x12	; 18
+      fe:	00 e0       	ldi	r16, 0x00	; 0
+     100:	0b bf       	out	0x3b, r16	; 59
+     102:	02 c0       	rjmp	.+4      	; 0x108 <__do_copy_data+0x14>
+     104:	07 90       	elpm	r0, Z+
+     106:	0d 92       	st	X+, r0
+     108:	a4 30       	cpi	r26, 0x04	; 4
+     10a:	b1 07       	cpc	r27, r17
+     10c:	d9 f7       	brne	.-10     	; 0x104 <__do_copy_data+0x10>
+
+0000010e <__do_clear_bss>:
+     10e:	12 e0       	ldi	r17, 0x02	; 2
+     110:	a4 e0       	ldi	r26, 0x04	; 4
+     112:	b2 e0       	ldi	r27, 0x02	; 2
+     114:	01 c0       	rjmp	.+2      	; 0x118 <.do_clear_bss_start>
+
+00000116 <.do_clear_bss_loop>:
+     116:	1d 92       	st	X+, r1
+
+00000118 <.do_clear_bss_start>:
+     118:	aa 36       	cpi	r26, 0x6A	; 106
+     11a:	b1 07       	cpc	r27, r17
+     11c:	e1 f7       	brne	.-8      	; 0x116 <.do_clear_bss_loop>
+     11e:	0e 94 e1 04 	call	0x9c2	; 0x9c2 <main>
+     122:	0c 94 65 09 	jmp	0x12ca	; 0x12ca <_exit>
+
+00000126 <__bad_interrupt>:
+     126:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000012a <Led_init>:
+Logic :			Sets the port B.
+Example Call :  magnet_pin_config();
+*/
+void Led_init(void)
+{
+	DDRJ = 0b00001111;
+     12a:	8f e0       	ldi	r24, 0x0F	; 15
+     12c:	80 93 04 01 	sts	0x0104, r24
+	PORTJ = 0b00000000;
+     130:	10 92 05 01 	sts	0x0105, r1
+}
+     134:	08 95       	ret
+
+00000136 <magnet_pin_config>:
+void magnet_pin_config(void)
+{
+	DDRH = 0b00000001;
+     136:	81 e0       	ldi	r24, 0x01	; 1
+     138:	80 93 01 01 	sts	0x0101, r24
+	PORTH = 0b00000000;
+     13c:	10 92 02 01 	sts	0x0102, r1
+}
+     140:	08 95       	ret
+
+00000142 <magnet_on>:
+Logic :			Sets the port B.
+Example Call :  magnet_on();
+*/
+void magnet_on(void)
+{
+	PORTH = 0b00000001;
+     142:	81 e0       	ldi	r24, 0x01	; 1
+     144:	80 93 02 01 	sts	0x0102, r24
+}
+     148:	08 95       	ret
+
+0000014a <magnet_off>:
+Logic :			Sets the port B.
+Example Call :  magnet_off();
+*/
+void magnet_off(void)
+{
+	PORTH = 0b00000000;
+     14a:	10 92 02 01 	sts	0x0102, r1
+}
+     14e:	08 95       	ret
+
+00000150 <buzzer_pin_config>:
+Logic :			Sets the port B.
+Example Call :  buzzer_pin_config();
+*/
+void buzzer_pin_config(void)
+{
+	DDRB = 0b00000001;
+     150:	81 e0       	ldi	r24, 0x01	; 1
+     152:	84 b9       	out	0x04, r24	; 4
+	PORTB = 0b00000000;
+     154:	15 b8       	out	0x05, r1	; 5
+}
+     156:	08 95       	ret
+
+00000158 <motor_pin_config>:
+Logic :			Sets the port A.
+Example Call :  motor_pin_config();
+*/
+void motor_pin_config(void)
+{
+	DDRA = 0b11111111;
+     158:	8f ef       	ldi	r24, 0xFF	; 255
+     15a:	81 b9       	out	0x01, r24	; 1
+	PORTA = 0b00000000;
+     15c:	12 b8       	out	0x02, r1	; 2
+}
+     15e:	08 95       	ret
+
+00000160 <backward>:
+Example Call :  backward();
+*/
+
+void backward(void)
+{
+	PORTA = 0b01001101 ;
+     160:	8d e4       	ldi	r24, 0x4D	; 77
+     162:	82 b9       	out	0x02, r24	; 2
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     164:	83 e3       	ldi	r24, 0x33	; 51
+     166:	93 e7       	ldi	r25, 0x73	; 115
+     168:	01 97       	sbiw	r24, 0x01	; 1
+     16a:	f1 f7       	brne	.-4      	; 0x168 <backward+0x8>
+	{
+		_delay_ms (8) ;
+	}	
+	PORTA = 0b00000000;
+     16c:	12 b8       	out	0x02, r1	; 2
+     16e:	89 e9       	ldi	r24, 0x99	; 153
+     170:	99 e5       	ldi	r25, 0x59	; 89
+     172:	a1 e0       	ldi	r26, 0x01	; 1
+     174:	81 50       	subi	r24, 0x01	; 1
+     176:	90 40       	sbci	r25, 0x00	; 0
+     178:	a0 40       	sbci	r26, 0x00	; 0
+     17a:	e1 f7       	brne	.-8      	; 0x174 <backward+0x14>
+     17c:	00 00       	nop
+	_delay_ms(30);
+}
+     17e:	08 95       	ret
+
+00000180 <forward>:
+Logic :			Done by moving both the motors in forward direction.
+Example Call :  forward();
+*/
+void forward(void)
+{
+	timeout_ctr = 0 ;
+     180:	10 92 05 02 	sts	0x0205, r1
+     184:	10 92 04 02 	sts	0x0204, r1
+	PORTA = 0b10001110;
+     188:	8e e8       	ldi	r24, 0x8E	; 142
+     18a:	82 b9       	out	0x02, r24	; 2
+	
+	if(data[i+1] == 3)
+     18c:	80 91 12 02 	lds	r24, 0x0212
+     190:	90 91 13 02 	lds	r25, 0x0213
+     194:	fc 01       	movw	r30, r24
+     196:	e2 5e       	subi	r30, 0xE2	; 226
+     198:	fd 4f       	sbci	r31, 0xFD	; 253
+     19a:	41 81       	ldd	r20, Z+1	; 0x01
+     19c:	43 30       	cpi	r20, 0x03	; 3
+     19e:	31 f4       	brne	.+12     	; 0x1ac <forward+0x2c>
+     1a0:	86 e6       	ldi	r24, 0x66	; 102
+     1a2:	96 e5       	ldi	r25, 0x56	; 86
+     1a4:	01 97       	sbiw	r24, 0x01	; 1
+     1a6:	f1 f7       	brne	.-4      	; 0x1a4 <forward+0x24>
+     1a8:	00 00       	nop
+     1aa:	52 c0       	rjmp	.+164    	; 0x250 <forward+0xd0>
+	{
+		_delay_ms(6);
+	}
+	else if((data[i] == 2) || (slow_flag == 1) || (i == -1))
+     1ac:	fc 01       	movw	r30, r24
+     1ae:	e2 5e       	subi	r30, 0xE2	; 226
+     1b0:	fd 4f       	sbci	r31, 0xFD	; 253
+     1b2:	20 81       	ld	r18, Z
+     1b4:	22 30       	cpi	r18, 0x02	; 2
+     1b6:	59 f0       	breq	.+22     	; 0x1ce <forward+0x4e>
+     1b8:	20 91 06 02 	lds	r18, 0x0206
+     1bc:	30 91 07 02 	lds	r19, 0x0207
+     1c0:	21 30       	cpi	r18, 0x01	; 1
+     1c2:	31 05       	cpc	r19, r1
+     1c4:	21 f0       	breq	.+8      	; 0x1ce <forward+0x4e>
+     1c6:	af ef       	ldi	r26, 0xFF	; 255
+     1c8:	8f 3f       	cpi	r24, 0xFF	; 255
+     1ca:	9a 07       	cpc	r25, r26
+     1cc:	29 f4       	brne	.+10     	; 0x1d8 <forward+0x58>
+     1ce:	83 e3       	ldi	r24, 0x33	; 51
+     1d0:	93 e7       	ldi	r25, 0x73	; 115
+     1d2:	01 97       	sbiw	r24, 0x01	; 1
+     1d4:	f1 f7       	brne	.-4      	; 0x1d2 <forward+0x52>
+     1d6:	3c c0       	rjmp	.+120    	; 0x250 <forward+0xd0>
+	{
+		_delay_ms (8);
+	}
+	else if ( ( (slow_flag == 0) && (data[i+1] != 6) ) && ShaftCountLeft >= 200)
+     1d8:	21 15       	cp	r18, r1
+     1da:	31 05       	cpc	r19, r1
+     1dc:	a9 f4       	brne	.+42     	; 0x208 <forward+0x88>
+     1de:	46 30       	cpi	r20, 0x06	; 6
+     1e0:	99 f0       	breq	.+38     	; 0x208 <forward+0x88>
+     1e2:	80 91 0e 02 	lds	r24, 0x020E
+     1e6:	90 91 0f 02 	lds	r25, 0x020F
+     1ea:	a0 91 10 02 	lds	r26, 0x0210
+     1ee:	b0 91 11 02 	lds	r27, 0x0211
+     1f2:	88 3c       	cpi	r24, 0xC8	; 200
+     1f4:	91 05       	cpc	r25, r1
+     1f6:	a1 05       	cpc	r26, r1
+     1f8:	b1 05       	cpc	r27, r1
+     1fa:	b4 f0       	brlt	.+44     	; 0x228 <forward+0xa8>
+     1fc:	a9 e9       	ldi	r26, 0x99	; 153
+     1fe:	b9 ec       	ldi	r27, 0xC9	; 201
+     200:	11 97       	sbiw	r26, 0x01	; 1
+     202:	f1 f7       	brne	.-4      	; 0x200 <forward+0x80>
+     204:	00 c0       	rjmp	.+0      	; 0x206 <forward+0x86>
+     206:	24 c0       	rjmp	.+72     	; 0x250 <forward+0xd0>
+	{
+		_delay_ms (14) ;
+	}
+	else if( ShaftCountLeft < 200 && (slow_flag == 0) && (data[i+1] != 6)) 
+     208:	80 91 0e 02 	lds	r24, 0x020E
+     20c:	90 91 0f 02 	lds	r25, 0x020F
+     210:	a0 91 10 02 	lds	r26, 0x0210
+     214:	b0 91 11 02 	lds	r27, 0x0211
+     218:	88 3c       	cpi	r24, 0xC8	; 200
+     21a:	91 05       	cpc	r25, r1
+     21c:	a1 05       	cpc	r26, r1
+     21e:	b1 05       	cpc	r27, r1
+     220:	64 f4       	brge	.+24     	; 0x23a <forward+0xba>
+     222:	21 15       	cp	r18, r1
+     224:	31 05       	cpc	r19, r1
+     226:	81 f4       	brne	.+32     	; 0x248 <forward+0xc8>
+     228:	46 30       	cpi	r20, 0x06	; 6
+     22a:	71 f0       	breq	.+28     	; 0x248 <forward+0xc8>
+     22c:	8f ef       	ldi	r24, 0xFF	; 255
+     22e:	9f e8       	ldi	r25, 0x8F	; 143
+     230:	01 97       	sbiw	r24, 0x01	; 1
+     232:	f1 f7       	brne	.-4      	; 0x230 <forward+0xb0>
+     234:	00 c0       	rjmp	.+0      	; 0x236 <forward+0xb6>
+     236:	00 00       	nop
+     238:	0b c0       	rjmp	.+22     	; 0x250 <forward+0xd0>
+     23a:	af ef       	ldi	r26, 0xFF	; 255
+     23c:	bf e8       	ldi	r27, 0x8F	; 143
+     23e:	11 97       	sbiw	r26, 0x01	; 1
+     240:	f1 f7       	brne	.-4      	; 0x23e <forward+0xbe>
+     242:	00 c0       	rjmp	.+0      	; 0x244 <forward+0xc4>
+     244:	00 00       	nop
+     246:	04 c0       	rjmp	.+8      	; 0x250 <forward+0xd0>
+     248:	83 e3       	ldi	r24, 0x33	; 51
+     24a:	93 e7       	ldi	r25, 0x73	; 115
+     24c:	01 97       	sbiw	r24, 0x01	; 1
+     24e:	f1 f7       	brne	.-4      	; 0x24c <forward+0xcc>
+		else
+		{
+			_delay_ms(8);
+		}
+	}
+	PORTA = 0b00000000 ;
+     250:	12 b8       	out	0x02, r1	; 2
+     252:	8c ec       	ldi	r24, 0xCC	; 204
+     254:	9c ec       	ldi	r25, 0xCC	; 204
+     256:	a1 e0       	ldi	r26, 0x01	; 1
+     258:	81 50       	subi	r24, 0x01	; 1
+     25a:	90 40       	sbci	r25, 0x00	; 0
+     25c:	a0 40       	sbci	r26, 0x00	; 0
+     25e:	e1 f7       	brne	.-8      	; 0x258 <forward+0xd8>
+     260:	00 c0       	rjmp	.+0      	; 0x262 <forward+0xe2>
+	_delay_ms ( 40 ) ;
+}
+     262:	08 95       	ret
+
+00000264 <left>:
+Logic :			Done by moving the left motor backward and right motor in forward direction.
+Example Call :  left();
+*/
+void left(void)
+{
+	timeout_ctr = 0 ;
+     264:	10 92 05 02 	sts	0x0205, r1
+     268:	10 92 04 02 	sts	0x0204, r1
+	ShaftCountLeft = 0 ;
+     26c:	10 92 0e 02 	sts	0x020E, r1
+     270:	10 92 0f 02 	sts	0x020F, r1
+     274:	10 92 10 02 	sts	0x0210, r1
+     278:	10 92 11 02 	sts	0x0211, r1
+	PORTA = 0b10001101;
+     27c:	8d e8       	ldi	r24, 0x8D	; 141
+     27e:	82 b9       	out	0x02, r24	; 2
+	if(data[i+1] == 3)
+     280:	e0 91 12 02 	lds	r30, 0x0212
+     284:	f0 91 13 02 	lds	r31, 0x0213
+     288:	e2 5e       	subi	r30, 0xE2	; 226
+     28a:	fd 4f       	sbci	r31, 0xFD	; 253
+     28c:	81 81       	ldd	r24, Z+1	; 0x01
+     28e:	83 30       	cpi	r24, 0x03	; 3
+     290:	31 f4       	brne	.+12     	; 0x29e <left+0x3a>
+     292:	86 e6       	ldi	r24, 0x66	; 102
+     294:	96 e5       	ldi	r25, 0x56	; 86
+     296:	01 97       	sbiw	r24, 0x01	; 1
+     298:	f1 f7       	brne	.-4      	; 0x296 <left+0x32>
+     29a:	00 00       	nop
+     29c:	05 c0       	rjmp	.+10     	; 0x2a8 <left+0x44>
+     29e:	a9 e9       	ldi	r26, 0x99	; 153
+     2a0:	b1 e8       	ldi	r27, 0x81	; 129
+     2a2:	11 97       	sbiw	r26, 0x01	; 1
+     2a4:	f1 f7       	brne	.-4      	; 0x2a2 <left+0x3e>
+     2a6:	00 c0       	rjmp	.+0      	; 0x2a8 <left+0x44>
+	}
+	else
+	{
+		_delay_ms (9) ;
+	}
+	PORTA = 0b00000000;
+     2a8:	12 b8       	out	0x02, r1	; 2
+     2aa:	8b e5       	ldi	r24, 0x5B	; 91
+     2ac:	9f ee       	ldi	r25, 0xEF	; 239
+     2ae:	a1 e0       	ldi	r26, 0x01	; 1
+     2b0:	81 50       	subi	r24, 0x01	; 1
+     2b2:	90 40       	sbci	r25, 0x00	; 0
+     2b4:	a0 40       	sbci	r26, 0x00	; 0
+     2b6:	e1 f7       	brne	.-8      	; 0x2b0 <left+0x4c>
+     2b8:	00 c0       	rjmp	.+0      	; 0x2ba <left+0x56>
+     2ba:	00 c0       	rjmp	.+0      	; 0x2bc <left+0x58>
+	_delay_ms ( 43 ) ;
+}
+     2bc:	08 95       	ret
+
+000002be <right>:
+Logic :			Done by moving the left motor forward and right motor in backward direction.
+Example Call :  right();
+*/
+void right(void)
+{
+	timeout_ctr = 0 ;
+     2be:	10 92 05 02 	sts	0x0205, r1
+     2c2:	10 92 04 02 	sts	0x0204, r1
+	ShaftCountLeft = 0 ;
+     2c6:	10 92 0e 02 	sts	0x020E, r1
+     2ca:	10 92 0f 02 	sts	0x020F, r1
+     2ce:	10 92 10 02 	sts	0x0210, r1
+     2d2:	10 92 11 02 	sts	0x0211, r1
+	PORTA = 0b01001110;
+     2d6:	8e e4       	ldi	r24, 0x4E	; 78
+     2d8:	82 b9       	out	0x02, r24	; 2
+	if(data[i+1] == 3)
+     2da:	e0 91 12 02 	lds	r30, 0x0212
+     2de:	f0 91 13 02 	lds	r31, 0x0213
+     2e2:	e2 5e       	subi	r30, 0xE2	; 226
+     2e4:	fd 4f       	sbci	r31, 0xFD	; 253
+     2e6:	81 81       	ldd	r24, Z+1	; 0x01
+     2e8:	83 30       	cpi	r24, 0x03	; 3
+     2ea:	31 f4       	brne	.+12     	; 0x2f8 <right+0x3a>
+     2ec:	86 e6       	ldi	r24, 0x66	; 102
+     2ee:	96 e5       	ldi	r25, 0x56	; 86
+     2f0:	01 97       	sbiw	r24, 0x01	; 1
+     2f2:	f1 f7       	brne	.-4      	; 0x2f0 <right+0x32>
+     2f4:	00 00       	nop
+     2f6:	05 c0       	rjmp	.+10     	; 0x302 <right+0x44>
+     2f8:	a9 e9       	ldi	r26, 0x99	; 153
+     2fa:	b1 e8       	ldi	r27, 0x81	; 129
+     2fc:	11 97       	sbiw	r26, 0x01	; 1
+     2fe:	f1 f7       	brne	.-4      	; 0x2fc <right+0x3e>
+     300:	00 c0       	rjmp	.+0      	; 0x302 <right+0x44>
+	}
+	else
+	{
+		_delay_ms (9) ;
+	}
+	PORTA = 0b00000000;
+     302:	12 b8       	out	0x02, r1	; 2
+     304:	8b e5       	ldi	r24, 0x5B	; 91
+     306:	9f ee       	ldi	r25, 0xEF	; 239
+     308:	a1 e0       	ldi	r26, 0x01	; 1
+     30a:	81 50       	subi	r24, 0x01	; 1
+     30c:	90 40       	sbci	r25, 0x00	; 0
+     30e:	a0 40       	sbci	r26, 0x00	; 0
+     310:	e1 f7       	brne	.-8      	; 0x30a <right+0x4c>
+     312:	00 c0       	rjmp	.+0      	; 0x314 <right+0x56>
+     314:	00 c0       	rjmp	.+0      	; 0x316 <right+0x58>
+	_delay_ms ( 43 ) ;
+}
+     316:	08 95       	ret
+
+00000318 <soft_right>:
+Logic :			Done by moving the left motor forward and stopping the right motor.
+Example Call :  soft_right();
+*/
+void soft_right(void)
+{
+	timeout_ctr ++ ;
+     318:	80 91 04 02 	lds	r24, 0x0204
+     31c:	90 91 05 02 	lds	r25, 0x0205
+     320:	01 96       	adiw	r24, 0x01	; 1
+     322:	90 93 05 02 	sts	0x0205, r25
+     326:	80 93 04 02 	sts	0x0204, r24
+	PORTA = 0b00001110;
+     32a:	8e e0       	ldi	r24, 0x0E	; 14
+     32c:	82 b9       	out	0x02, r24	; 2
+	
+	
+	if(data[i+1] == 3)
+     32e:	80 91 12 02 	lds	r24, 0x0212
+     332:	90 91 13 02 	lds	r25, 0x0213
+     336:	fc 01       	movw	r30, r24
+     338:	e2 5e       	subi	r30, 0xE2	; 226
+     33a:	fd 4f       	sbci	r31, 0xFD	; 253
+     33c:	41 81       	ldd	r20, Z+1	; 0x01
+     33e:	43 30       	cpi	r20, 0x03	; 3
+     340:	31 f4       	brne	.+12     	; 0x34e <soft_right+0x36>
+     342:	86 e6       	ldi	r24, 0x66	; 102
+     344:	96 e5       	ldi	r25, 0x56	; 86
+     346:	01 97       	sbiw	r24, 0x01	; 1
+     348:	f1 f7       	brne	.-4      	; 0x346 <soft_right+0x2e>
+     34a:	00 00       	nop
+     34c:	53 c0       	rjmp	.+166    	; 0x3f4 <soft_right+0xdc>
+	{
+		_delay_ms(6);
+	}
+	else if((data[i] == 2) || (slow_flag == 1) || (i == -1))
+     34e:	fc 01       	movw	r30, r24
+     350:	e2 5e       	subi	r30, 0xE2	; 226
+     352:	fd 4f       	sbci	r31, 0xFD	; 253
+     354:	20 81       	ld	r18, Z
+     356:	22 30       	cpi	r18, 0x02	; 2
+     358:	59 f0       	breq	.+22     	; 0x370 <soft_right+0x58>
+     35a:	20 91 06 02 	lds	r18, 0x0206
+     35e:	30 91 07 02 	lds	r19, 0x0207
+     362:	21 30       	cpi	r18, 0x01	; 1
+     364:	31 05       	cpc	r19, r1
+     366:	21 f0       	breq	.+8      	; 0x370 <soft_right+0x58>
+     368:	af ef       	ldi	r26, 0xFF	; 255
+     36a:	8f 3f       	cpi	r24, 0xFF	; 255
+     36c:	9a 07       	cpc	r25, r26
+     36e:	29 f4       	brne	.+10     	; 0x37a <soft_right+0x62>
+     370:	83 e3       	ldi	r24, 0x33	; 51
+     372:	93 e7       	ldi	r25, 0x73	; 115
+     374:	01 97       	sbiw	r24, 0x01	; 1
+     376:	f1 f7       	brne	.-4      	; 0x374 <soft_right+0x5c>
+     378:	3d c0       	rjmp	.+122    	; 0x3f4 <soft_right+0xdc>
+	{
+		_delay_ms (8);
+	}
+	else if ( ( (slow_flag == 0) && (data[i+1] != 6) ) && ShaftCountLeft >= 200)
+     37a:	21 15       	cp	r18, r1
+     37c:	31 05       	cpc	r19, r1
+     37e:	a9 f4       	brne	.+42     	; 0x3aa <soft_right+0x92>
+     380:	46 30       	cpi	r20, 0x06	; 6
+     382:	99 f0       	breq	.+38     	; 0x3aa <soft_right+0x92>
+     384:	80 91 0e 02 	lds	r24, 0x020E
+     388:	90 91 0f 02 	lds	r25, 0x020F
+     38c:	a0 91 10 02 	lds	r26, 0x0210
+     390:	b0 91 11 02 	lds	r27, 0x0211
+     394:	88 3c       	cpi	r24, 0xC8	; 200
+     396:	91 05       	cpc	r25, r1
+     398:	a1 05       	cpc	r26, r1
+     39a:	b1 05       	cpc	r27, r1
+     39c:	b4 f0       	brlt	.+44     	; 0x3ca <soft_right+0xb2>
+     39e:	a9 e9       	ldi	r26, 0x99	; 153
+     3a0:	b9 ec       	ldi	r27, 0xC9	; 201
+     3a2:	11 97       	sbiw	r26, 0x01	; 1
+     3a4:	f1 f7       	brne	.-4      	; 0x3a2 <soft_right+0x8a>
+     3a6:	00 c0       	rjmp	.+0      	; 0x3a8 <soft_right+0x90>
+     3a8:	25 c0       	rjmp	.+74     	; 0x3f4 <soft_right+0xdc>
+	{
+		_delay_ms (14) ;
+	}
+	else if( ShaftCountLeft < 200 && (slow_flag == 0) && (data[i+1] != 6))
+     3aa:	80 91 0e 02 	lds	r24, 0x020E
+     3ae:	90 91 0f 02 	lds	r25, 0x020F
+     3b2:	a0 91 10 02 	lds	r26, 0x0210
+     3b6:	b0 91 11 02 	lds	r27, 0x0211
+     3ba:	88 3c       	cpi	r24, 0xC8	; 200
+     3bc:	91 05       	cpc	r25, r1
+     3be:	a1 05       	cpc	r26, r1
+     3c0:	b1 05       	cpc	r27, r1
+     3c2:	64 f4       	brge	.+24     	; 0x3dc <soft_right+0xc4>
+     3c4:	21 15       	cp	r18, r1
+     3c6:	31 05       	cpc	r19, r1
+     3c8:	79 f4       	brne	.+30     	; 0x3e8 <soft_right+0xd0>
+     3ca:	46 30       	cpi	r20, 0x06	; 6
+     3cc:	69 f0       	breq	.+26     	; 0x3e8 <soft_right+0xd0>
+     3ce:	8f ef       	ldi	r24, 0xFF	; 255
+     3d0:	9f e8       	ldi	r25, 0x8F	; 143
+     3d2:	01 97       	sbiw	r24, 0x01	; 1
+     3d4:	f1 f7       	brne	.-4      	; 0x3d2 <soft_right+0xba>
+     3d6:	00 c0       	rjmp	.+0      	; 0x3d8 <soft_right+0xc0>
+     3d8:	00 00       	nop
+     3da:	0c c0       	rjmp	.+24     	; 0x3f4 <soft_right+0xdc>
+     3dc:	a9 e9       	ldi	r26, 0x99	; 153
+     3de:	b9 ec       	ldi	r27, 0xC9	; 201
+     3e0:	11 97       	sbiw	r26, 0x01	; 1
+     3e2:	f1 f7       	brne	.-4      	; 0x3e0 <soft_right+0xc8>
+     3e4:	00 c0       	rjmp	.+0      	; 0x3e6 <soft_right+0xce>
+     3e6:	06 c0       	rjmp	.+12     	; 0x3f4 <soft_right+0xdc>
+     3e8:	8f ef       	ldi	r24, 0xFF	; 255
+     3ea:	9f e8       	ldi	r25, 0x8F	; 143
+     3ec:	01 97       	sbiw	r24, 0x01	; 1
+     3ee:	f1 f7       	brne	.-4      	; 0x3ec <soft_right+0xd4>
+     3f0:	00 c0       	rjmp	.+0      	; 0x3f2 <soft_right+0xda>
+     3f2:	00 00       	nop
+	}
+	else
+	{
+		_delay_ms (7) ;
+	}*/
+	PORTA = 0b00000000;
+     3f4:	12 b8       	out	0x02, r1	; 2
+     3f6:	8b e5       	ldi	r24, 0x5B	; 91
+     3f8:	9f ee       	ldi	r25, 0xEF	; 239
+     3fa:	a1 e0       	ldi	r26, 0x01	; 1
+     3fc:	81 50       	subi	r24, 0x01	; 1
+     3fe:	90 40       	sbci	r25, 0x00	; 0
+     400:	a0 40       	sbci	r26, 0x00	; 0
+     402:	e1 f7       	brne	.-8      	; 0x3fc <soft_right+0xe4>
+     404:	00 c0       	rjmp	.+0      	; 0x406 <soft_right+0xee>
+     406:	00 c0       	rjmp	.+0      	; 0x408 <soft_right+0xf0>
+	_delay_ms ( 43 ) ;
+}
+     408:	08 95       	ret
+
+0000040a <soft_left>:
+Logic :			Done by stopping the left motor and moving the right motor in forward direction.
+Example Call :  soft_left();
+*/
+void soft_left(void)
+{
+	timeout_ctr ++ ;
+     40a:	80 91 04 02 	lds	r24, 0x0204
+     40e:	90 91 05 02 	lds	r25, 0x0205
+     412:	01 96       	adiw	r24, 0x01	; 1
+     414:	90 93 05 02 	sts	0x0205, r25
+     418:	80 93 04 02 	sts	0x0204, r24
+	PORTA = 0b10001100;
+     41c:	8c e8       	ldi	r24, 0x8C	; 140
+     41e:	82 b9       	out	0x02, r24	; 2
+	
+	
+	
+	
+	if(data[i+1] == 3)
+     420:	80 91 12 02 	lds	r24, 0x0212
+     424:	90 91 13 02 	lds	r25, 0x0213
+     428:	fc 01       	movw	r30, r24
+     42a:	e2 5e       	subi	r30, 0xE2	; 226
+     42c:	fd 4f       	sbci	r31, 0xFD	; 253
+     42e:	41 81       	ldd	r20, Z+1	; 0x01
+     430:	43 30       	cpi	r20, 0x03	; 3
+     432:	31 f4       	brne	.+12     	; 0x440 <soft_left+0x36>
+     434:	86 e6       	ldi	r24, 0x66	; 102
+     436:	96 e5       	ldi	r25, 0x56	; 86
+     438:	01 97       	sbiw	r24, 0x01	; 1
+     43a:	f1 f7       	brne	.-4      	; 0x438 <soft_left+0x2e>
+     43c:	00 00       	nop
+     43e:	53 c0       	rjmp	.+166    	; 0x4e6 <soft_left+0xdc>
+	{
+		_delay_ms(6);
+	}
+	else if((data[i] == 2) || (slow_flag == 1) || (i == -1))
+     440:	fc 01       	movw	r30, r24
+     442:	e2 5e       	subi	r30, 0xE2	; 226
+     444:	fd 4f       	sbci	r31, 0xFD	; 253
+     446:	20 81       	ld	r18, Z
+     448:	22 30       	cpi	r18, 0x02	; 2
+     44a:	59 f0       	breq	.+22     	; 0x462 <soft_left+0x58>
+     44c:	20 91 06 02 	lds	r18, 0x0206
+     450:	30 91 07 02 	lds	r19, 0x0207
+     454:	21 30       	cpi	r18, 0x01	; 1
+     456:	31 05       	cpc	r19, r1
+     458:	21 f0       	breq	.+8      	; 0x462 <soft_left+0x58>
+     45a:	af ef       	ldi	r26, 0xFF	; 255
+     45c:	8f 3f       	cpi	r24, 0xFF	; 255
+     45e:	9a 07       	cpc	r25, r26
+     460:	29 f4       	brne	.+10     	; 0x46c <soft_left+0x62>
+     462:	83 e3       	ldi	r24, 0x33	; 51
+     464:	93 e7       	ldi	r25, 0x73	; 115
+     466:	01 97       	sbiw	r24, 0x01	; 1
+     468:	f1 f7       	brne	.-4      	; 0x466 <soft_left+0x5c>
+     46a:	3d c0       	rjmp	.+122    	; 0x4e6 <soft_left+0xdc>
+	{
+		_delay_ms (8);
+	}
+	else if ( ( (slow_flag == 0) && (data[i+1] != 6) ) && ShaftCountLeft >= 200)
+     46c:	21 15       	cp	r18, r1
+     46e:	31 05       	cpc	r19, r1
+     470:	a9 f4       	brne	.+42     	; 0x49c <soft_left+0x92>
+     472:	46 30       	cpi	r20, 0x06	; 6
+     474:	99 f0       	breq	.+38     	; 0x49c <soft_left+0x92>
+     476:	80 91 0e 02 	lds	r24, 0x020E
+     47a:	90 91 0f 02 	lds	r25, 0x020F
+     47e:	a0 91 10 02 	lds	r26, 0x0210
+     482:	b0 91 11 02 	lds	r27, 0x0211
+     486:	88 3c       	cpi	r24, 0xC8	; 200
+     488:	91 05       	cpc	r25, r1
+     48a:	a1 05       	cpc	r26, r1
+     48c:	b1 05       	cpc	r27, r1
+     48e:	b4 f0       	brlt	.+44     	; 0x4bc <soft_left+0xb2>
+     490:	a9 e9       	ldi	r26, 0x99	; 153
+     492:	b9 ec       	ldi	r27, 0xC9	; 201
+     494:	11 97       	sbiw	r26, 0x01	; 1
+     496:	f1 f7       	brne	.-4      	; 0x494 <soft_left+0x8a>
+     498:	00 c0       	rjmp	.+0      	; 0x49a <soft_left+0x90>
+     49a:	25 c0       	rjmp	.+74     	; 0x4e6 <soft_left+0xdc>
+	{
+		_delay_ms (14) ;
+	}
+	else if( ShaftCountLeft < 200 && (slow_flag == 0) && (data[i+1] != 6))
+     49c:	80 91 0e 02 	lds	r24, 0x020E
+     4a0:	90 91 0f 02 	lds	r25, 0x020F
+     4a4:	a0 91 10 02 	lds	r26, 0x0210
+     4a8:	b0 91 11 02 	lds	r27, 0x0211
+     4ac:	88 3c       	cpi	r24, 0xC8	; 200
+     4ae:	91 05       	cpc	r25, r1
+     4b0:	a1 05       	cpc	r26, r1
+     4b2:	b1 05       	cpc	r27, r1
+     4b4:	64 f4       	brge	.+24     	; 0x4ce <soft_left+0xc4>
+     4b6:	21 15       	cp	r18, r1
+     4b8:	31 05       	cpc	r19, r1
+     4ba:	79 f4       	brne	.+30     	; 0x4da <soft_left+0xd0>
+     4bc:	46 30       	cpi	r20, 0x06	; 6
+     4be:	69 f0       	breq	.+26     	; 0x4da <soft_left+0xd0>
+     4c0:	8f ef       	ldi	r24, 0xFF	; 255
+     4c2:	9f e8       	ldi	r25, 0x8F	; 143
+     4c4:	01 97       	sbiw	r24, 0x01	; 1
+     4c6:	f1 f7       	brne	.-4      	; 0x4c4 <soft_left+0xba>
+     4c8:	00 c0       	rjmp	.+0      	; 0x4ca <soft_left+0xc0>
+     4ca:	00 00       	nop
+     4cc:	0c c0       	rjmp	.+24     	; 0x4e6 <soft_left+0xdc>
+     4ce:	a9 e9       	ldi	r26, 0x99	; 153
+     4d0:	b9 ec       	ldi	r27, 0xC9	; 201
+     4d2:	11 97       	sbiw	r26, 0x01	; 1
+     4d4:	f1 f7       	brne	.-4      	; 0x4d2 <soft_left+0xc8>
+     4d6:	00 c0       	rjmp	.+0      	; 0x4d8 <soft_left+0xce>
+     4d8:	06 c0       	rjmp	.+12     	; 0x4e6 <soft_left+0xdc>
+     4da:	8f ef       	ldi	r24, 0xFF	; 255
+     4dc:	9f e8       	ldi	r25, 0x8F	; 143
+     4de:	01 97       	sbiw	r24, 0x01	; 1
+     4e0:	f1 f7       	brne	.-4      	; 0x4de <soft_left+0xd4>
+     4e2:	00 c0       	rjmp	.+0      	; 0x4e4 <soft_left+0xda>
+     4e4:	00 00       	nop
+	}
+	else
+	{
+		_delay_ms (7) ;
+	}*/
+	PORTA = 0b00000000;
+     4e6:	12 b8       	out	0x02, r1	; 2
+     4e8:	8b e5       	ldi	r24, 0x5B	; 91
+     4ea:	9f ee       	ldi	r25, 0xEF	; 239
+     4ec:	a1 e0       	ldi	r26, 0x01	; 1
+     4ee:	81 50       	subi	r24, 0x01	; 1
+     4f0:	90 40       	sbci	r25, 0x00	; 0
+     4f2:	a0 40       	sbci	r26, 0x00	; 0
+     4f4:	e1 f7       	brne	.-8      	; 0x4ee <soft_left+0xe4>
+     4f6:	00 c0       	rjmp	.+0      	; 0x4f8 <soft_left+0xee>
+     4f8:	00 c0       	rjmp	.+0      	; 0x4fa <soft_left+0xf0>
+	_delay_ms ( 43 ) ;
+	
+}
+     4fa:	08 95       	ret
+
+000004fc <stop>:
+Logic :			Done by stopping both the motors.
+Example Call :  stop();
+*/
+void stop(void)
+{
+	timeout_ctr = 0 ;
+     4fc:	10 92 05 02 	sts	0x0205, r1
+     500:	10 92 04 02 	sts	0x0204, r1
+	PORTA = 0b00001100;
+     504:	8c e0       	ldi	r24, 0x0C	; 12
+     506:	82 b9       	out	0x02, r24	; 2
+}
+     508:	08 95       	ret
+
+0000050a <uart0_init>:
+Logic :			Done by setting the UCSR registers.
+Example Call :  uart0_init();
+*/
+void uart0_init(void)
+{
+	UCSR0B = 0x00;							//disable while setting baud rate
+     50a:	a1 ec       	ldi	r26, 0xC1	; 193
+     50c:	b0 e0       	ldi	r27, 0x00	; 0
+     50e:	1c 92       	st	X, r1
+	UCSR0A = 0x00;
+     510:	10 92 c0 00 	sts	0x00C0, r1
+	UCSR0C = 0x06;
+     514:	e2 ec       	ldi	r30, 0xC2	; 194
+     516:	f0 e0       	ldi	r31, 0x00	; 0
+     518:	86 e0       	ldi	r24, 0x06	; 6
+     51a:	80 83       	st	Z, r24
+	UBRR0L = 0x5F; 							//9600BPS at 14745600Hz
+     51c:	9f e5       	ldi	r25, 0x5F	; 95
+     51e:	90 93 c4 00 	sts	0x00C4, r25
+	UBRR0H = 0x00;
+     522:	10 92 c5 00 	sts	0x00C5, r1
+	//UCSR0B = 0x98;							//setting 8-bit character and 1 stop bit
+	UCSR0B = RX | TX;
+     526:	98 e1       	ldi	r25, 0x18	; 24
+     528:	9c 93       	st	X, r25
+	UCSR0C = 3<<1;
+     52a:	80 83       	st	Z, r24
+}
+     52c:	08 95       	ret
+
+0000052e <uart_tx>:
+Logic :			Done by checking the TE flag continuously to verify whether the UDR0 register is available for use and sending data accordingly .
+Example Call :  uart_tx('i');
+*/
+void uart_tx(char data)
+{
+	while(!(UCSR0A & TE));	//waiting to transmit
+     52e:	e0 ec       	ldi	r30, 0xC0	; 192
+     530:	f0 e0       	ldi	r31, 0x00	; 0
+     532:	90 81       	ld	r25, Z
+     534:	95 ff       	sbrs	r25, 5
+     536:	fd cf       	rjmp	.-6      	; 0x532 <uart_tx+0x4>
+	if(data == '\n')
+     538:	8a 30       	cpi	r24, 0x0A	; 10
+     53a:	21 f4       	brne	.+8      	; 0x544 <uart_tx+0x16>
+	{
+		UDR0 = 0x0d;
+     53c:	8d e0       	ldi	r24, 0x0D	; 13
+     53e:	80 93 c6 00 	sts	0x00C6, r24
+     542:	08 95       	ret
+	}
+	else
+	{
+		UDR0 = data;
+     544:	80 93 c6 00 	sts	0x00C6, r24
+     548:	08 95       	ret
+
+0000054a <adc_pin_config>:
+Logic :			Done by setting Port F.
+Example Call :  adc_pin_config();
+*/
+void adc_pin_config (void)
+{
+	DDRF = 0x00;
+     54a:	10 ba       	out	0x10, r1	; 16
+	PORTF = 0x00;
+     54c:	11 ba       	out	0x11, r1	; 17
+	DDRK = 0x00;
+     54e:	10 92 07 01 	sts	0x0107, r1
+	PORTK = 0x00;
+     552:	10 92 08 01 	sts	0x0108, r1
+}
+     556:	08 95       	ret
+
+00000558 <adc_init>:
+Example Call :  adc_init();
+*/
+
+void adc_init(void)
+{
+	ADCSRA = 0x00;
+     558:	ea e7       	ldi	r30, 0x7A	; 122
+     55a:	f0 e0       	ldi	r31, 0x00	; 0
+     55c:	10 82       	st	Z, r1
+	ADCSRB = 0x00;		//MUX5 = 0
+     55e:	10 92 7b 00 	sts	0x007B, r1
+	ADMUX = 0x20;		//Vref=5V external --- ADLAR=1 --- MUX4:0 = 0000
+     562:	80 e2       	ldi	r24, 0x20	; 32
+     564:	80 93 7c 00 	sts	0x007C, r24
+	ACSR = 0x80;
+     568:	80 e8       	ldi	r24, 0x80	; 128
+     56a:	80 bf       	out	0x30, r24	; 48
+	ADCSRA = 0x86;		//ADEN=1 --- ADIE=1 --- ADPS2:0 = 1 1 0
+     56c:	86 e8       	ldi	r24, 0x86	; 134
+     56e:	80 83       	st	Z, r24
+}
+     570:	08 95       	ret
+
+00000572 <ADC_Conversion>:
+Example Call :  ADC_Conversion(1);
+*/
+unsigned char ADC_Conversion(unsigned char Ch)
+{
+	int a;
+	if(Ch>7)
+     572:	88 30       	cpi	r24, 0x08	; 8
+     574:	18 f0       	brcs	.+6      	; 0x57c <ADC_Conversion+0xa>
+	{
+		ADCSRB = 0x08;
+     576:	98 e0       	ldi	r25, 0x08	; 8
+     578:	90 93 7b 00 	sts	0x007B, r25
+	}
+	
+	Ch = Ch & 0x07;
+     57c:	87 70       	andi	r24, 0x07	; 7
+	ADMUX= 0x20| Ch;
+     57e:	80 62       	ori	r24, 0x20	; 32
+     580:	80 93 7c 00 	sts	0x007C, r24
+	ADCSRA = ADCSRA | 0x40;		//Set start conversion bit
+     584:	ea e7       	ldi	r30, 0x7A	; 122
+     586:	f0 e0       	ldi	r31, 0x00	; 0
+     588:	80 81       	ld	r24, Z
+     58a:	80 64       	ori	r24, 0x40	; 64
+     58c:	80 83       	st	Z, r24
+	while((ADCSRA&0x10)==0);	//Wait for conversion to complete
+     58e:	80 81       	ld	r24, Z
+     590:	84 ff       	sbrs	r24, 4
+     592:	fd cf       	rjmp	.-6      	; 0x58e <ADC_Conversion+0x1c>
+	a=ADCH;
+     594:	80 91 79 00 	lds	r24, 0x0079
+	ADCSRA = ADCSRA|0x10; //clear ADIF (ADC Interrupt Flag) by writing 1 to it
+     598:	ea e7       	ldi	r30, 0x7A	; 122
+     59a:	f0 e0       	ldi	r31, 0x00	; 0
+     59c:	90 81       	ld	r25, Z
+     59e:	90 61       	ori	r25, 0x10	; 16
+     5a0:	90 83       	st	Z, r25
+	ADCSRB = 0x00;
+     5a2:	10 92 7b 00 	sts	0x007B, r1
+	return a;
+}
+     5a6:	08 95       	ret
+
+000005a8 <Read_path>:
+				used to set the L,M,R on comparing with the threshold values of the left, middle and the right sensor ,which define the
+				state of the bot.
+Example Call :  Read_path();
+*/
+void Read_path(void)
+{
+     5a8:	cf 93       	push	r28
+     5aa:	df 93       	push	r29
+	static int LEFT = 0 , RIGHT = 0 , MIDDLE = 0 ;
+	static count = 0 ;
+	static char scl[20] ;
+	LEFT = ADC_Conversion(3);
+     5ac:	83 e0       	ldi	r24, 0x03	; 3
+     5ae:	0e 94 b9 02 	call	0x572	; 0x572 <ADC_Conversion>
+     5b2:	c8 2f       	mov	r28, r24
+     5b4:	d0 e0       	ldi	r29, 0x00	; 0
+     5b6:	d0 93 15 02 	sts	0x0215, r29
+     5ba:	c0 93 14 02 	sts	0x0214, r28
+	MIDDLE = ADC_Conversion(1);
+     5be:	81 e0       	ldi	r24, 0x01	; 1
+     5c0:	0e 94 b9 02 	call	0x572	; 0x572 <ADC_Conversion>
+     5c4:	80 93 16 02 	sts	0x0216, r24
+     5c8:	10 92 17 02 	sts	0x0217, r1
+	RIGHT = ADC_Conversion(2);
+     5cc:	82 e0       	ldi	r24, 0x02	; 2
+     5ce:	0e 94 b9 02 	call	0x572	; 0x572 <ADC_Conversion>
+     5d2:	80 93 18 02 	sts	0x0218, r24
+     5d6:	10 92 19 02 	sts	0x0219, r1
+	if(LEFT >= 206)		//Sets L 1 if senses black line under the left sensor else 0. prev value 240
+     5da:	ce 3c       	cpi	r28, 0xCE	; 206
+     5dc:	d1 05       	cpc	r29, r1
+     5de:	64 f0       	brlt	.+24     	; 0x5f8 <Read_path+0x50>
+	{
+		L = 1;
+     5e0:	81 e0       	ldi	r24, 0x01	; 1
+     5e2:	90 e0       	ldi	r25, 0x00	; 0
+     5e4:	90 93 65 02 	sts	0x0265, r25
+     5e8:	80 93 64 02 	sts	0x0264, r24
+		PORTJ = (0b11111110) & PORTJ;
+     5ec:	e5 e0       	ldi	r30, 0x05	; 5
+     5ee:	f1 e0       	ldi	r31, 0x01	; 1
+     5f0:	80 81       	ld	r24, Z
+     5f2:	8e 7f       	andi	r24, 0xFE	; 254
+     5f4:	80 83       	st	Z, r24
+     5f6:	09 c0       	rjmp	.+18     	; 0x60a <Read_path+0x62>
+	}
+	else
+	{
+		L = 0;
+     5f8:	10 92 65 02 	sts	0x0265, r1
+     5fc:	10 92 64 02 	sts	0x0264, r1
+		PORTJ = (0b00000001) | PORTJ;
+     600:	e5 e0       	ldi	r30, 0x05	; 5
+     602:	f1 e0       	ldi	r31, 0x01	; 1
+     604:	80 81       	ld	r24, Z
+     606:	81 60       	ori	r24, 0x01	; 1
+     608:	80 83       	st	Z, r24
+	}
+	if(RIGHT >= 214)		//Sets R 1 if senses black line under the left sensor else 0.
+     60a:	80 91 18 02 	lds	r24, 0x0218
+     60e:	90 91 19 02 	lds	r25, 0x0219
+     612:	86 3d       	cpi	r24, 0xD6	; 214
+     614:	91 05       	cpc	r25, r1
+     616:	64 f0       	brlt	.+24     	; 0x630 <Read_path+0x88>
+	{
+		R = 1;
+     618:	81 e0       	ldi	r24, 0x01	; 1
+     61a:	90 e0       	ldi	r25, 0x00	; 0
+     61c:	90 93 67 02 	sts	0x0267, r25
+     620:	80 93 66 02 	sts	0x0266, r24
+		PORTJ = (0b11111011) & PORTJ;
+     624:	e5 e0       	ldi	r30, 0x05	; 5
+     626:	f1 e0       	ldi	r31, 0x01	; 1
+     628:	80 81       	ld	r24, Z
+     62a:	8b 7f       	andi	r24, 0xFB	; 251
+     62c:	80 83       	st	Z, r24
+     62e:	09 c0       	rjmp	.+18     	; 0x642 <Read_path+0x9a>
+	}
+	else
+	{
+		R = 0;
+     630:	10 92 67 02 	sts	0x0267, r1
+     634:	10 92 66 02 	sts	0x0266, r1
+		PORTJ = (0b00000100) | PORTJ;
+     638:	e5 e0       	ldi	r30, 0x05	; 5
+     63a:	f1 e0       	ldi	r31, 0x01	; 1
+     63c:	80 81       	ld	r24, Z
+     63e:	84 60       	ori	r24, 0x04	; 4
+     640:	80 83       	st	Z, r24
+	}
+	if(MIDDLE >= 188)	//Sets M 1 if senses black line under the left sensor else 0. prev value 238
+     642:	80 91 16 02 	lds	r24, 0x0216
+     646:	90 91 17 02 	lds	r25, 0x0217
+     64a:	8c 3b       	cpi	r24, 0xBC	; 188
+     64c:	91 05       	cpc	r25, r1
+     64e:	64 f0       	brlt	.+24     	; 0x668 <Read_path+0xc0>
+	{
+		M = 1;
+     650:	81 e0       	ldi	r24, 0x01	; 1
+     652:	90 e0       	ldi	r25, 0x00	; 0
+     654:	90 93 69 02 	sts	0x0269, r25
+     658:	80 93 68 02 	sts	0x0268, r24
+		PORTJ = (0b11111101) & PORTJ;
+     65c:	e5 e0       	ldi	r30, 0x05	; 5
+     65e:	f1 e0       	ldi	r31, 0x01	; 1
+     660:	80 81       	ld	r24, Z
+     662:	8d 7f       	andi	r24, 0xFD	; 253
+     664:	80 83       	st	Z, r24
+     666:	09 c0       	rjmp	.+18     	; 0x67a <Read_path+0xd2>
+	}
+	else
+	{
+		M = 0;
+     668:	10 92 69 02 	sts	0x0269, r1
+     66c:	10 92 68 02 	sts	0x0268, r1
+		PORTJ = (0b00000010) | PORTJ;
+     670:	e5 e0       	ldi	r30, 0x05	; 5
+     672:	f1 e0       	ldi	r31, 0x01	; 1
+     674:	80 81       	ld	r24, Z
+     676:	82 60       	ori	r24, 0x02	; 2
+     678:	80 83       	st	Z, r24
+	}
+	if( slow_flag == 1 )
+     67a:	80 91 06 02 	lds	r24, 0x0206
+     67e:	90 91 07 02 	lds	r25, 0x0207
+     682:	81 30       	cpi	r24, 0x01	; 1
+     684:	91 05       	cpc	r25, r1
+     686:	51 f4       	brne	.+20     	; 0x69c <Read_path+0xf4>
+	{
+		f1 = 0 ;
+     688:	10 92 09 02 	sts	0x0209, r1
+     68c:	10 92 08 02 	sts	0x0208, r1
+		PORTJ = 0b00001000 | PORTJ;
+     690:	e5 e0       	ldi	r30, 0x05	; 5
+     692:	f1 e0       	ldi	r31, 0x01	; 1
+     694:	80 81       	ld	r24, Z
+     696:	88 60       	ori	r24, 0x08	; 8
+     698:	80 83       	st	Z, r24
+     69a:	05 c0       	rjmp	.+10     	; 0x6a6 <Read_path+0xfe>
+	}
+	else
+	{
+		PORTJ = 0b11110111 & PORTJ;
+     69c:	e5 e0       	ldi	r30, 0x05	; 5
+     69e:	f1 e0       	ldi	r31, 0x01	; 1
+     6a0:	80 81       	ld	r24, Z
+     6a2:	87 7f       	andi	r24, 0xF7	; 247
+     6a4:	80 83       	st	Z, r24
+	}
+}
+     6a6:	df 91       	pop	r29
+     6a8:	cf 91       	pop	r28
+     6aa:	08 95       	ret
+
+000006ac <uart_rx>:
+Logic :			Done by checking the RE flag continuously to verify whether the UDR0 register has received some data or not.
+Example Call :  uart_rx();
+*/
+char uart_rx()
+{
+	while(!(UCSR0A & RE));				//waiting to receive.
+     6ac:	e0 ec       	ldi	r30, 0xC0	; 192
+     6ae:	f0 e0       	ldi	r31, 0x00	; 0
+     6b0:	80 81       	ld	r24, Z
+     6b2:	88 23       	and	r24, r24
+     6b4:	ec f7       	brge	.-6      	; 0x6b0 <uart_rx+0x4>
+	return UDR0;
+     6b6:	80 91 c6 00 	lds	r24, 0x00C6
+}
+     6ba:	08 95       	ret
+
+000006bc <Rotate_pie>:
+Example Call :  Rotate_pie();
+*/
+void Rotate_pie(void)
+{
+	int j;
+	if(data[i+1] == 3)
+     6bc:	e0 91 12 02 	lds	r30, 0x0212
+     6c0:	f0 91 13 02 	lds	r31, 0x0213
+     6c4:	e2 5e       	subi	r30, 0xE2	; 226
+     6c6:	fd 4f       	sbci	r31, 0xFD	; 253
+     6c8:	81 81       	ldd	r24, Z+1	; 0x01
+     6ca:	83 30       	cpi	r24, 0x03	; 3
+     6cc:	49 f4       	brne	.+18     	; 0x6e0 <Rotate_pie+0x24>
+	{
+		PORTA = 0b10001110 ;  //forward
+     6ce:	8e e8       	ldi	r24, 0x8E	; 142
+     6d0:	82 b9       	out	0x02, r24	; 2
+     6d2:	8f ef       	ldi	r24, 0xFF	; 255
+     6d4:	9f e8       	ldi	r25, 0x8F	; 143
+     6d6:	01 97       	sbiw	r24, 0x01	; 1
+     6d8:	f1 f7       	brne	.-4      	; 0x6d6 <Rotate_pie+0x1a>
+     6da:	00 c0       	rjmp	.+0      	; 0x6dc <Rotate_pie+0x20>
+     6dc:	00 00       	nop
+		_delay_ms ( 10 ) ;
+		PORTA = 0b00000000 ;
+     6de:	12 b8       	out	0x02, r1	; 2
+	}
+	if(data[i] == 2)
+     6e0:	e0 91 12 02 	lds	r30, 0x0212
+     6e4:	f0 91 13 02 	lds	r31, 0x0213
+     6e8:	e2 5e       	subi	r30, 0xE2	; 226
+     6ea:	fd 4f       	sbci	r31, 0xFD	; 253
+     6ec:	80 81       	ld	r24, Z
+     6ee:	82 30       	cpi	r24, 0x02	; 2
+     6f0:	41 f0       	breq	.+16     	; 0x702 <Rotate_pie+0x46>
+			PORTA = 0b00000000 ;
+		}
+	}
+	else
+	{
+		while(!L)
+     6f2:	80 91 64 02 	lds	r24, 0x0264
+     6f6:	90 91 65 02 	lds	r25, 0x0265
+     6fa:	00 97       	sbiw	r24, 0x00	; 0
+     6fc:	09 f4       	brne	.+2      	; 0x700 <Rotate_pie+0x44>
+     6fe:	4c c0       	rjmp	.+152    	; 0x798 <Rotate_pie+0xdc>
+     700:	55 c0       	rjmp	.+170    	; 0x7ac <Rotate_pie+0xf0>
+		_delay_ms ( 10 ) ;
+		PORTA = 0b00000000 ;
+	}
+	if(data[i] == 2)
+	{
+		while(!R)
+     702:	80 91 66 02 	lds	r24, 0x0266
+     706:	90 91 67 02 	lds	r25, 0x0267
+     70a:	00 97       	sbiw	r24, 0x00	; 0
+     70c:	51 f4       	brne	.+20     	; 0x722 <Rotate_pie+0x66>
+		{
+			left();
+     70e:	0e 94 32 01 	call	0x264	; 0x264 <left>
+			Read_path();
+     712:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+		_delay_ms ( 10 ) ;
+		PORTA = 0b00000000 ;
+	}
+	if(data[i] == 2)
+	{
+		while(!R)
+     716:	80 91 66 02 	lds	r24, 0x0266
+     71a:	90 91 67 02 	lds	r25, 0x0267
+     71e:	00 97       	sbiw	r24, 0x00	; 0
+     720:	b1 f3       	breq	.-20     	; 0x70e <Rotate_pie+0x52>
+			left();
+			Read_path();
+		}
+		for(j = 0;j < 6; j++)
+		{
+			backward();
+     722:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+     726:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+     72a:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+     72e:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+     732:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+     736:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+     73a:	04 c0       	rjmp	.+8      	; 0x744 <Rotate_pie+0x88>
+		}	
+		while(R || M)
+		{
+			Read_path();
+     73c:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+			left();
+     740:	0e 94 32 01 	call	0x264	; 0x264 <left>
+		}
+		for(j = 0;j < 6; j++)
+		{
+			backward();
+		}	
+		while(R || M)
+     744:	80 91 66 02 	lds	r24, 0x0266
+     748:	90 91 67 02 	lds	r25, 0x0267
+     74c:	00 97       	sbiw	r24, 0x00	; 0
+     74e:	b1 f7       	brne	.-20     	; 0x73c <Rotate_pie+0x80>
+     750:	80 91 68 02 	lds	r24, 0x0268
+     754:	90 91 69 02 	lds	r25, 0x0269
+     758:	00 97       	sbiw	r24, 0x00	; 0
+     75a:	81 f7       	brne	.-32     	; 0x73c <Rotate_pie+0x80>
+			Read_path();
+			left();
+		}
+		while( !M )
+		{
+			Read_path();
+     75c:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+			left();
+     760:	0e 94 32 01 	call	0x264	; 0x264 <left>
+		while(R || M)
+		{
+			Read_path();
+			left();
+		}
+		while( !M )
+     764:	80 91 68 02 	lds	r24, 0x0268
+     768:	90 91 69 02 	lds	r25, 0x0269
+     76c:	00 97       	sbiw	r24, 0x00	; 0
+     76e:	b1 f3       	breq	.-20     	; 0x75c <Rotate_pie+0xa0>
+		{
+			Read_path();
+			left();
+		}
+		if(data[i+1] != 3)
+     770:	e0 91 12 02 	lds	r30, 0x0212
+     774:	f0 91 13 02 	lds	r31, 0x0213
+     778:	e2 5e       	subi	r30, 0xE2	; 226
+     77a:	fd 4f       	sbci	r31, 0xFD	; 253
+     77c:	81 81       	ldd	r24, Z+1	; 0x01
+     77e:	83 30       	cpi	r24, 0x03	; 3
+     780:	09 f4       	brne	.+2      	; 0x784 <Rotate_pie+0xc8>
+     782:	4d c0       	rjmp	.+154    	; 0x81e <Rotate_pie+0x162>
+		{
+			PORTA = 0b01001101 ;
+     784:	8d e4       	ldi	r24, 0x4D	; 77
+     786:	82 b9       	out	0x02, r24	; 2
+     788:	8f ef       	ldi	r24, 0xFF	; 255
+     78a:	9f e8       	ldi	r25, 0x8F	; 143
+     78c:	01 97       	sbiw	r24, 0x01	; 1
+     78e:	f1 f7       	brne	.-4      	; 0x78c <Rotate_pie+0xd0>
+     790:	00 c0       	rjmp	.+0      	; 0x792 <Rotate_pie+0xd6>
+     792:	00 00       	nop
+			_delay_ms ( 10 ) ;
+			PORTA = 0b00000000 ;
+     794:	12 b8       	out	0x02, r1	; 2
+     796:	08 95       	ret
+	}
+	else
+	{
+		while(!L)
+		{
+			right();
+     798:	0e 94 5f 01 	call	0x2be	; 0x2be <right>
+			Read_path();
+     79c:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+			PORTA = 0b00000000 ;
+		}
+	}
+	else
+	{
+		while(!L)
+     7a0:	80 91 64 02 	lds	r24, 0x0264
+     7a4:	90 91 65 02 	lds	r25, 0x0265
+     7a8:	00 97       	sbiw	r24, 0x00	; 0
+     7aa:	b1 f3       	breq	.-20     	; 0x798 <Rotate_pie+0xdc>
+			right();
+			Read_path();
+		}
+		for(j = 0;j < 6; j++)
+		{
+			backward();
+     7ac:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+     7b0:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+     7b4:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+     7b8:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+     7bc:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+     7c0:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+     7c4:	04 c0       	rjmp	.+8      	; 0x7ce <Rotate_pie+0x112>
+		}
+		while(L || M)
+		{
+			Read_path();
+     7c6:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+			right();
+     7ca:	0e 94 5f 01 	call	0x2be	; 0x2be <right>
+		}
+		for(j = 0;j < 6; j++)
+		{
+			backward();
+		}
+		while(L || M)
+     7ce:	80 91 64 02 	lds	r24, 0x0264
+     7d2:	90 91 65 02 	lds	r25, 0x0265
+     7d6:	00 97       	sbiw	r24, 0x00	; 0
+     7d8:	b1 f7       	brne	.-20     	; 0x7c6 <Rotate_pie+0x10a>
+     7da:	80 91 68 02 	lds	r24, 0x0268
+     7de:	90 91 69 02 	lds	r25, 0x0269
+     7e2:	00 97       	sbiw	r24, 0x00	; 0
+     7e4:	81 f7       	brne	.-32     	; 0x7c6 <Rotate_pie+0x10a>
+			Read_path();
+			right();
+		}
+		while( !M )
+		{
+			Read_path();
+     7e6:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+			right();
+     7ea:	0e 94 5f 01 	call	0x2be	; 0x2be <right>
+		while(L || M)
+		{
+			Read_path();
+			right();
+		}
+		while( !M )
+     7ee:	80 91 68 02 	lds	r24, 0x0268
+     7f2:	90 91 69 02 	lds	r25, 0x0269
+     7f6:	00 97       	sbiw	r24, 0x00	; 0
+     7f8:	b1 f3       	breq	.-20     	; 0x7e6 <Rotate_pie+0x12a>
+		{
+			Read_path();
+			right();
+		}
+		if(data[i+1] != 3)
+     7fa:	e0 91 12 02 	lds	r30, 0x0212
+     7fe:	f0 91 13 02 	lds	r31, 0x0213
+     802:	e2 5e       	subi	r30, 0xE2	; 226
+     804:	fd 4f       	sbci	r31, 0xFD	; 253
+     806:	81 81       	ldd	r24, Z+1	; 0x01
+     808:	83 30       	cpi	r24, 0x03	; 3
+     80a:	49 f0       	breq	.+18     	; 0x81e <Rotate_pie+0x162>
+		{
+			PORTA = 0b01001110 ;
+     80c:	8e e4       	ldi	r24, 0x4E	; 78
+     80e:	82 b9       	out	0x02, r24	; 2
+     810:	8f ef       	ldi	r24, 0xFF	; 255
+     812:	9f e8       	ldi	r25, 0x8F	; 143
+     814:	01 97       	sbiw	r24, 0x01	; 1
+     816:	f1 f7       	brne	.-4      	; 0x814 <Rotate_pie+0x158>
+     818:	00 c0       	rjmp	.+0      	; 0x81a <Rotate_pie+0x15e>
+     81a:	00 00       	nop
+			_delay_ms ( 10 ) ;
+			PORTA = 0b00000000 ;
+     81c:	12 b8       	out	0x02, r1	; 2
+     81e:	08 95       	ret
+
+00000820 <Pebble_pick_n_drop>:
+Logic :			The static variable checks whether its a pebble drop or pebble pickup. Accordingly it switches magnet on or off.
+				It checks the left motor encoder whether it has rotated enough or not to cover the given distance.
+Example Call :  Pebble_pick_n_drop( distance ).
+*/
+void Pebble_pick_n_drop( int distance )
+{
+     820:	cf 92       	push	r12
+     822:	df 92       	push	r13
+     824:	ef 92       	push	r14
+     826:	ff 92       	push	r15
+     828:	cf 93       	push	r28
+     82a:	df 93       	push	r29
+     82c:	ec 01       	movw	r28, r24
+	static int Pebble_or_pitcher = 0;
+	Pebble_or_pitcher++; 
+     82e:	80 91 1a 02 	lds	r24, 0x021A
+     832:	90 91 1b 02 	lds	r25, 0x021B
+     836:	01 96       	adiw	r24, 0x01	; 1
+     838:	90 93 1b 02 	sts	0x021B, r25
+     83c:	80 93 1a 02 	sts	0x021A, r24
+	if(Pebble_or_pitcher % 2 != 0)
+     840:	80 ff       	sbrs	r24, 0
+     842:	02 c0       	rjmp	.+4      	; 0x848 <Pebble_pick_n_drop+0x28>
+	{
+		magnet_on();
+     844:	0e 94 a1 00 	call	0x142	; 0x142 <magnet_on>
+	}
+	ShaftCountLeft = 0 ;
+     848:	10 92 0e 02 	sts	0x020E, r1
+     84c:	10 92 0f 02 	sts	0x020F, r1
+     850:	10 92 10 02 	sts	0x0210, r1
+     854:	10 92 11 02 	sts	0x0211, r1
+	while ( ( ShaftCountLeft ) < distance )
+     858:	6e 01       	movw	r12, r28
+     85a:	ee 24       	eor	r14, r14
+     85c:	d7 fc       	sbrc	r13, 7
+     85e:	e0 94       	com	r14
+     860:	fe 2c       	mov	r15, r14
+     862:	1c 14       	cp	r1, r12
+     864:	1d 04       	cpc	r1, r13
+     866:	1e 04       	cpc	r1, r14
+     868:	1f 04       	cpc	r1, r15
+     86a:	7c f4       	brge	.+30     	; 0x88a <Pebble_pick_n_drop+0x6a>
+	{
+		forward();
+     86c:	0e 94 c0 00 	call	0x180	; 0x180 <forward>
+	if(Pebble_or_pitcher % 2 != 0)
+	{
+		magnet_on();
+	}
+	ShaftCountLeft = 0 ;
+	while ( ( ShaftCountLeft ) < distance )
+     870:	80 91 0e 02 	lds	r24, 0x020E
+     874:	90 91 0f 02 	lds	r25, 0x020F
+     878:	a0 91 10 02 	lds	r26, 0x0210
+     87c:	b0 91 11 02 	lds	r27, 0x0211
+     880:	8c 15       	cp	r24, r12
+     882:	9d 05       	cpc	r25, r13
+     884:	ae 05       	cpc	r26, r14
+     886:	bf 05       	cpc	r27, r15
+     888:	8c f3       	brlt	.-30     	; 0x86c <Pebble_pick_n_drop+0x4c>
+	{
+		forward();
+	}
+	if(Pebble_or_pitcher % 2 == 0)
+     88a:	80 91 1a 02 	lds	r24, 0x021A
+     88e:	80 fd       	sbrc	r24, 0
+     890:	02 c0       	rjmp	.+4      	; 0x896 <Pebble_pick_n_drop+0x76>
+	{
+		magnet_off();
+     892:	0e 94 a5 00 	call	0x14a	; 0x14a <magnet_off>
+	}
+	uart_tx('M');		//Sending M to change the pebble or Pitcher.
+     896:	8d e4       	ldi	r24, 0x4D	; 77
+     898:	0e 94 97 02 	call	0x52e	; 0x52e <uart_tx>
+     89c:	8f ef       	ldi	r24, 0xFF	; 255
+     89e:	9f ef       	ldi	r25, 0xFF	; 255
+     8a0:	a9 e5       	ldi	r26, 0x59	; 89
+     8a2:	81 50       	subi	r24, 0x01	; 1
+     8a4:	90 40       	sbci	r25, 0x00	; 0
+     8a6:	a0 40       	sbci	r26, 0x00	; 0
+     8a8:	e1 f7       	brne	.-8      	; 0x8a2 <Pebble_pick_n_drop+0x82>
+     8aa:	00 c0       	rjmp	.+0      	; 0x8ac <Pebble_pick_n_drop+0x8c>
+     8ac:	00 00       	nop
+	_delay_ms(2000);
+	
+	ShaftCountLeft = 0 ;
+     8ae:	10 92 0e 02 	sts	0x020E, r1
+     8b2:	10 92 0f 02 	sts	0x020F, r1
+     8b6:	10 92 10 02 	sts	0x0210, r1
+     8ba:	10 92 11 02 	sts	0x0211, r1
+	if( (data[i+1] == 2) || (data[i + 1] == 6) )
+     8be:	e0 91 12 02 	lds	r30, 0x0212
+     8c2:	f0 91 13 02 	lds	r31, 0x0213
+     8c6:	e2 5e       	subi	r30, 0xE2	; 226
+     8c8:	fd 4f       	sbci	r31, 0xFD	; 253
+     8ca:	81 81       	ldd	r24, Z+1	; 0x01
+     8cc:	82 30       	cpi	r24, 0x02	; 2
+     8ce:	61 f4       	brne	.+24     	; 0x8e8 <Pebble_pick_n_drop+0xc8>
+	{
+		while ( ShaftCountLeft < distance + 25 )
+     8d0:	69 96       	adiw	r28, 0x19	; 25
+     8d2:	6e 01       	movw	r12, r28
+     8d4:	ee 24       	eor	r14, r14
+     8d6:	d7 fc       	sbrc	r13, 7
+     8d8:	e0 94       	com	r14
+     8da:	fe 2c       	mov	r15, r14
+     8dc:	1c 14       	cp	r1, r12
+     8de:	1d 04       	cpc	r1, r13
+     8e0:	1e 04       	cpc	r1, r14
+     8e2:	1f 04       	cpc	r1, r15
+     8e4:	7c f0       	brlt	.+30     	; 0x904 <Pebble_pick_n_drop+0xe4>
+     8e6:	2d c0       	rjmp	.+90     	; 0x942 <Pebble_pick_n_drop+0x122>
+	}
+	uart_tx('M');		//Sending M to change the pebble or Pitcher.
+	_delay_ms(2000);
+	
+	ShaftCountLeft = 0 ;
+	if( (data[i+1] == 2) || (data[i + 1] == 6) )
+     8e8:	86 30       	cpi	r24, 0x06	; 6
+     8ea:	91 f3       	breq	.-28     	; 0x8d0 <Pebble_pick_n_drop+0xb0>
+			backward();
+		}
+	}		
+	else
+	{
+		while ( ShaftCountLeft < distance + 35 )
+     8ec:	a3 96       	adiw	r28, 0x23	; 35
+     8ee:	6e 01       	movw	r12, r28
+     8f0:	ee 24       	eor	r14, r14
+     8f2:	d7 fc       	sbrc	r13, 7
+     8f4:	e0 94       	com	r14
+     8f6:	fe 2c       	mov	r15, r14
+     8f8:	1c 14       	cp	r1, r12
+     8fa:	1d 04       	cpc	r1, r13
+     8fc:	1e 04       	cpc	r1, r14
+     8fe:	1f 04       	cpc	r1, r15
+     900:	8c f0       	brlt	.+34     	; 0x924 <Pebble_pick_n_drop+0x104>
+     902:	1f c0       	rjmp	.+62     	; 0x942 <Pebble_pick_n_drop+0x122>
+	ShaftCountLeft = 0 ;
+	if( (data[i+1] == 2) || (data[i + 1] == 6) )
+	{
+		while ( ShaftCountLeft < distance + 25 )
+		{
+			backward();
+     904:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+	_delay_ms(2000);
+	
+	ShaftCountLeft = 0 ;
+	if( (data[i+1] == 2) || (data[i + 1] == 6) )
+	{
+		while ( ShaftCountLeft < distance + 25 )
+     908:	80 91 0e 02 	lds	r24, 0x020E
+     90c:	90 91 0f 02 	lds	r25, 0x020F
+     910:	a0 91 10 02 	lds	r26, 0x0210
+     914:	b0 91 11 02 	lds	r27, 0x0211
+     918:	8c 15       	cp	r24, r12
+     91a:	9d 05       	cpc	r25, r13
+     91c:	ae 05       	cpc	r26, r14
+     91e:	bf 05       	cpc	r27, r15
+     920:	8c f3       	brlt	.-30     	; 0x904 <Pebble_pick_n_drop+0xe4>
+     922:	0f c0       	rjmp	.+30     	; 0x942 <Pebble_pick_n_drop+0x122>
+	}		
+	else
+	{
+		while ( ShaftCountLeft < distance + 35 )
+		{
+			backward();
+     924:	0e 94 b0 00 	call	0x160	; 0x160 <backward>
+			backward();
+		}
+	}		
+	else
+	{
+		while ( ShaftCountLeft < distance + 35 )
+     928:	80 91 0e 02 	lds	r24, 0x020E
+     92c:	90 91 0f 02 	lds	r25, 0x020F
+     930:	a0 91 10 02 	lds	r26, 0x0210
+     934:	b0 91 11 02 	lds	r27, 0x0211
+     938:	8c 15       	cp	r24, r12
+     93a:	9d 05       	cpc	r25, r13
+     93c:	ae 05       	cpc	r26, r14
+     93e:	bf 05       	cpc	r27, r15
+     940:	8c f3       	brlt	.-30     	; 0x924 <Pebble_pick_n_drop+0x104>
+		{
+			backward();
+		}
+	}
+	
+	ShaftCountLeft = 0 ;
+     942:	10 92 0e 02 	sts	0x020E, r1
+     946:	10 92 0f 02 	sts	0x020F, r1
+     94a:	10 92 10 02 	sts	0x0210, r1
+     94e:	10 92 11 02 	sts	0x0211, r1
+}
+     952:	df 91       	pop	r29
+     954:	cf 91       	pop	r28
+     956:	ff 90       	pop	r15
+     958:	ef 90       	pop	r14
+     95a:	df 90       	pop	r13
+     95c:	cf 90       	pop	r12
+     95e:	08 95       	ret
+
+00000960 <left_encoder_pin_config>:
+Example Call :  left_encoder_pin_config();
+*/
+
+void left_encoder_pin_config (void)
+{
+	DDRB  = 0b11001111;
+     960:	8f ec       	ldi	r24, 0xCF	; 207
+     962:	84 b9       	out	0x04, r24	; 4
+}
+     964:	08 95       	ret
+
+00000966 <left_position_encoder_interrupt_init>:
+Example Call :  left_position_encoder_interrupt_init();.
+*/
+
+void left_position_encoder_interrupt_init (void) //Interrupt 1 enable
+{
+	cli(); //Clears the global interrupt
+     966:	f8 94       	cli
+	EICRB = EICRB | 0x08;//Configuring INT5 to give interrupt on falling edge
+     968:	ea e6       	ldi	r30, 0x6A	; 106
+     96a:	f0 e0       	ldi	r31, 0x00	; 0
+     96c:	80 81       	ld	r24, Z
+     96e:	88 60       	ori	r24, 0x08	; 8
+     970:	80 83       	st	Z, r24
+	EIMSK = EIMSK | 0x20;//Enabling INT5
+     972:	ed 9a       	sbi	0x1d, 5	; 29
+	sei(); // Enables the global interrupt
+     974:	78 94       	sei
+}
+     976:	08 95       	ret
+
+00000978 <__vector_6>:
+
+
+
+//ISR for left position encoder
+ISR(INT5_vect)
+{
+     978:	1f 92       	push	r1
+     97a:	0f 92       	push	r0
+     97c:	0f b6       	in	r0, 0x3f	; 63
+     97e:	0f 92       	push	r0
+     980:	11 24       	eor	r1, r1
+     982:	8f 93       	push	r24
+     984:	9f 93       	push	r25
+     986:	af 93       	push	r26
+     988:	bf 93       	push	r27
+	ShaftCountLeft++;  //increment left shaft position count
+     98a:	80 91 0e 02 	lds	r24, 0x020E
+     98e:	90 91 0f 02 	lds	r25, 0x020F
+     992:	a0 91 10 02 	lds	r26, 0x0210
+     996:	b0 91 11 02 	lds	r27, 0x0211
+     99a:	01 96       	adiw	r24, 0x01	; 1
+     99c:	a1 1d       	adc	r26, r1
+     99e:	b1 1d       	adc	r27, r1
+     9a0:	80 93 0e 02 	sts	0x020E, r24
+     9a4:	90 93 0f 02 	sts	0x020F, r25
+     9a8:	a0 93 10 02 	sts	0x0210, r26
+     9ac:	b0 93 11 02 	sts	0x0211, r27
+}
+     9b0:	bf 91       	pop	r27
+     9b2:	af 91       	pop	r26
+     9b4:	9f 91       	pop	r25
+     9b6:	8f 91       	pop	r24
+     9b8:	0f 90       	pop	r0
+     9ba:	0f be       	out	0x3f, r0	; 63
+     9bc:	0f 90       	pop	r0
+     9be:	1f 90       	pop	r1
+     9c0:	18 95       	reti
+
+000009c2 <main>:
+Output :		Makes the bot to execute all the instructions.
+Logic :			It takes the instruction array by using the uart_rx function and iterates through the instruction and executes it.
+Example Call :  Called automatically by the OS.
+*/
+int main(void)
+{
+     9c2:	9f 92       	push	r9
+     9c4:	af 92       	push	r10
+     9c6:	bf 92       	push	r11
+     9c8:	cf 92       	push	r12
+     9ca:	df 92       	push	r13
+     9cc:	ef 92       	push	r14
+     9ce:	ff 92       	push	r15
+     9d0:	0f 93       	push	r16
+     9d2:	1f 93       	push	r17
+     9d4:	cf 93       	push	r28
+     9d6:	df 93       	push	r29
+	uint8_t j,Counter,No_of_beeps;  //Counter maintains the count of how many times it ringed the buzzer.
+	char m;
+	static int dist = 0 ;
+	Led_init();
+     9d8:	0e 94 95 00 	call	0x12a	; 0x12a <Led_init>
+	uart0_init();
+     9dc:	0e 94 85 02 	call	0x50a	; 0x50a <uart0_init>
+	adc_init();
+     9e0:	0e 94 ac 02 	call	0x558	; 0x558 <adc_init>
+	adc_pin_config();
+     9e4:	0e 94 a5 02 	call	0x54a	; 0x54a <adc_pin_config>
+	magnet_pin_config();
+     9e8:	0e 94 9b 00 	call	0x136	; 0x136 <magnet_pin_config>
+	motor_pin_config();
+     9ec:	0e 94 ac 00 	call	0x158	; 0x158 <motor_pin_config>
+	buzzer_pin_config();
+     9f0:	0e 94 a8 00 	call	0x150	; 0x150 <buzzer_pin_config>
+	left_encoder_pin_config();
+     9f4:	0e 94 b0 04 	call	0x960	; 0x960 <left_encoder_pin_config>
+	left_position_encoder_interrupt_init();
+     9f8:	0e 94 b3 04 	call	0x966	; 0x966 <left_position_encoder_interrupt_init>
+	uart_tx('R'); //Ready signal to start execution after switching on the bot.
+     9fc:	82 e5       	ldi	r24, 0x52	; 82
+     9fe:	0e 94 97 02 	call	0x52e	; 0x52e <uart_tx>
+
+	
+	while(1)
+	{
+		m = uart_rx();
+		if(UDR0 == 0b01000001) //0b01000101(ascii value of A) Instruction to rotate 180 degree.
+     a02:	c6 ec       	ldi	r28, 0xC6	; 198
+     a04:	d0 e0       	ldi	r29, 0x00	; 0
+		{
+			data[i] = 2;		//Storing 2 in data array for 180 degree rotation.
+     a06:	0e e1       	ldi	r16, 0x1E	; 30
+     a08:	12 e0       	ldi	r17, 0x02	; 2
+     a0a:	ff 24       	eor	r15, r15
+     a0c:	68 94       	set
+     a0e:	f1 f8       	bld	r15, 1
+			i++;
+			continue ;
+		}
+		if(UDR0 == 0b01011000)	//0b01011000(ascii value of X) Instruction to indicate the end.
+		{
+			data[i] = 4;		//Storing 4 in data array to end the execution.
+     a10:	aa 24       	eor	r10, r10
+     a12:	68 94       	set
+     a14:	a2 f8       	bld	r10, 2
+		}
+		
+		if(UDR0 == 0b01010010) //0b01010010(ascii value of R) Instruction to right turn.
+		{
+			
+			data[i] = 1;		//Storing 1 in data array to take a right turn.
+     a16:	bb 24       	eor	r11, r11
+     a18:	b3 94       	inc	r11
+			i++;
+			continue;
+		}
+		if(UDR0 == 0b01001101)	//0b01001101(ascii value of M) Instruction to ring the buzzer.
+		{
+			data[i] = 3;		//Storing 3 in data array for ringing the buzzer.
+     a1a:	0f 2e       	mov	r0, r31
+     a1c:	f3 e0       	ldi	r31, 0x03	; 3
+     a1e:	cf 2e       	mov	r12, r31
+     a20:	f0 2d       	mov	r31, r0
+			i++;
+			continue;
+		}
+		if(UDR0 == 0b01010011) //0b01000101(ascii value of S) Instruction to slow down bot.
+		{
+			data[i] = 6;		//Storing 6 in data array to slow down bot.
+     a22:	0f 2e       	mov	r0, r31
+     a24:	f6 e0       	ldi	r31, 0x06	; 6
+     a26:	df 2e       	mov	r13, r31
+     a28:	f0 2d       	mov	r31, r0
+			i++;
+			continue;
+		}
+		if(UDR0 == 0b01000011) //0b01000101(ascii value of C) Instruction to rotate 180 degree.
+		{
+			data[i] = 5;		//Storing 5 in data array for 180 degree rotation.
+     a2a:	0f 2e       	mov	r0, r31
+     a2c:	f5 e0       	ldi	r31, 0x05	; 5
+     a2e:	ef 2e       	mov	r14, r31
+     a30:	f0 2d       	mov	r31, r0
+	
+
+	
+	while(1)
+	{
+		m = uart_rx();
+     a32:	0e 94 56 03 	call	0x6ac	; 0x6ac <uart_rx>
+		if(UDR0 == 0b01000001) //0b01000101(ascii value of A) Instruction to rotate 180 degree.
+     a36:	88 81       	ld	r24, Y
+     a38:	81 34       	cpi	r24, 0x41	; 65
+     a3a:	71 f4       	brne	.+28     	; 0xa58 <main+0x96>
+		{
+			data[i] = 2;		//Storing 2 in data array for 180 degree rotation.
+     a3c:	80 91 12 02 	lds	r24, 0x0212
+     a40:	90 91 13 02 	lds	r25, 0x0213
+     a44:	f8 01       	movw	r30, r16
+     a46:	e8 0f       	add	r30, r24
+     a48:	f9 1f       	adc	r31, r25
+     a4a:	f0 82       	st	Z, r15
+			i++;
+     a4c:	01 96       	adiw	r24, 0x01	; 1
+     a4e:	90 93 13 02 	sts	0x0213, r25
+     a52:	80 93 12 02 	sts	0x0212, r24
+			continue;
+     a56:	ed cf       	rjmp	.-38     	; 0xa32 <main+0x70>
+		}
+		if(UDR0 == 0b01000011) //0b01000101(ascii value of C) Instruction to rotate 180 degree.
+     a58:	88 81       	ld	r24, Y
+     a5a:	83 34       	cpi	r24, 0x43	; 67
+     a5c:	71 f4       	brne	.+28     	; 0xa7a <main+0xb8>
+		{
+			data[i] = 5;		//Storing 5 in data array for 180 degree rotation.
+     a5e:	80 91 12 02 	lds	r24, 0x0212
+     a62:	90 91 13 02 	lds	r25, 0x0213
+     a66:	f8 01       	movw	r30, r16
+     a68:	e8 0f       	add	r30, r24
+     a6a:	f9 1f       	adc	r31, r25
+     a6c:	e0 82       	st	Z, r14
+			i++;
+     a6e:	01 96       	adiw	r24, 0x01	; 1
+     a70:	90 93 13 02 	sts	0x0213, r25
+     a74:	80 93 12 02 	sts	0x0212, r24
+			continue;
+     a78:	dc cf       	rjmp	.-72     	; 0xa32 <main+0x70>
+		}
+		if(UDR0 == 0b01010011) //0b01000101(ascii value of S) Instruction to slow down bot.
+     a7a:	88 81       	ld	r24, Y
+     a7c:	83 35       	cpi	r24, 0x53	; 83
+     a7e:	71 f4       	brne	.+28     	; 0xa9c <main+0xda>
+		{
+			data[i] = 6;		//Storing 6 in data array to slow down bot.
+     a80:	80 91 12 02 	lds	r24, 0x0212
+     a84:	90 91 13 02 	lds	r25, 0x0213
+     a88:	f8 01       	movw	r30, r16
+     a8a:	e8 0f       	add	r30, r24
+     a8c:	f9 1f       	adc	r31, r25
+     a8e:	d0 82       	st	Z, r13
+			i++;
+     a90:	01 96       	adiw	r24, 0x01	; 1
+     a92:	90 93 13 02 	sts	0x0213, r25
+     a96:	80 93 12 02 	sts	0x0212, r24
+			continue;
+     a9a:	cb cf       	rjmp	.-106    	; 0xa32 <main+0x70>
+		}
+		if(UDR0 == 0b01001101)	//0b01001101(ascii value of M) Instruction to ring the buzzer.
+     a9c:	88 81       	ld	r24, Y
+     a9e:	8d 34       	cpi	r24, 0x4D	; 77
+     aa0:	71 f4       	brne	.+28     	; 0xabe <main+0xfc>
+		{
+			data[i] = 3;		//Storing 3 in data array for ringing the buzzer.
+     aa2:	80 91 12 02 	lds	r24, 0x0212
+     aa6:	90 91 13 02 	lds	r25, 0x0213
+     aaa:	f8 01       	movw	r30, r16
+     aac:	e8 0f       	add	r30, r24
+     aae:	f9 1f       	adc	r31, r25
+     ab0:	c0 82       	st	Z, r12
+			i++;
+     ab2:	01 96       	adiw	r24, 0x01	; 1
+     ab4:	90 93 13 02 	sts	0x0213, r25
+     ab8:	80 93 12 02 	sts	0x0212, r24
+			continue;
+     abc:	ba cf       	rjmp	.-140    	; 0xa32 <main+0x70>
+		}
+		
+		if(UDR0 == 0b01001100)	//0b01001100(ascii value of L) Instruction to take left turn.
+     abe:	88 81       	ld	r24, Y
+     ac0:	8c 34       	cpi	r24, 0x4C	; 76
+     ac2:	71 f4       	brne	.+28     	; 0xae0 <main+0x11e>
+		{
+			data[i] = 0;		//Storing 0 in data array to take a left turn.
+     ac4:	80 91 12 02 	lds	r24, 0x0212
+     ac8:	90 91 13 02 	lds	r25, 0x0213
+     acc:	f8 01       	movw	r30, r16
+     ace:	e8 0f       	add	r30, r24
+     ad0:	f9 1f       	adc	r31, r25
+     ad2:	10 82       	st	Z, r1
+			i++;
+     ad4:	01 96       	adiw	r24, 0x01	; 1
+     ad6:	90 93 13 02 	sts	0x0213, r25
+     ada:	80 93 12 02 	sts	0x0212, r24
+			continue ;
+     ade:	a9 cf       	rjmp	.-174    	; 0xa32 <main+0x70>
+		}
+		
+		if(UDR0 == 0b01010010) //0b01010010(ascii value of R) Instruction to right turn.
+     ae0:	88 81       	ld	r24, Y
+     ae2:	82 35       	cpi	r24, 0x52	; 82
+     ae4:	71 f4       	brne	.+28     	; 0xb02 <main+0x140>
+		{
+			
+			data[i] = 1;		//Storing 1 in data array to take a right turn.
+     ae6:	80 91 12 02 	lds	r24, 0x0212
+     aea:	90 91 13 02 	lds	r25, 0x0213
+     aee:	f8 01       	movw	r30, r16
+     af0:	e8 0f       	add	r30, r24
+     af2:	f9 1f       	adc	r31, r25
+     af4:	b0 82       	st	Z, r11
+			i++;
+     af6:	01 96       	adiw	r24, 0x01	; 1
+     af8:	90 93 13 02 	sts	0x0213, r25
+     afc:	80 93 12 02 	sts	0x0212, r24
+			continue ;
+     b00:	98 cf       	rjmp	.-208    	; 0xa32 <main+0x70>
+		}
+		if(UDR0 == 0b01011000)	//0b01011000(ascii value of X) Instruction to indicate the end.
+     b02:	88 81       	ld	r24, Y
+     b04:	88 35       	cpi	r24, 0x58	; 88
+     b06:	39 f4       	brne	.+14     	; 0xb16 <main+0x154>
+		{
+			data[i] = 4;		//Storing 4 in data array to end the execution.
+     b08:	e0 91 12 02 	lds	r30, 0x0212
+     b0c:	f0 91 13 02 	lds	r31, 0x0213
+     b10:	e0 0f       	add	r30, r16
+     b12:	f1 1f       	adc	r31, r17
+     b14:	a0 82       	st	Z, r10
+		}
+		
+		if(data[i] == 4)	//Condition to check whether it has received all the instructions.
+     b16:	e0 91 12 02 	lds	r30, 0x0212
+     b1a:	f0 91 13 02 	lds	r31, 0x0213
+     b1e:	e0 0f       	add	r30, r16
+     b20:	f1 1f       	adc	r31, r17
+     b22:	80 81       	ld	r24, Z
+     b24:	84 30       	cpi	r24, 0x04	; 4
+     b26:	09 f0       	breq	.+2      	; 0xb2a <main+0x168>
+     b28:	84 cf       	rjmp	.-248    	; 0xa32 <main+0x70>
+		{
+			i = -1;			//Setting the index 'i' -1 as it increments the value of i further.
+     b2a:	8f ef       	ldi	r24, 0xFF	; 255
+     b2c:	9f ef       	ldi	r25, 0xFF	; 255
+     b2e:	90 93 13 02 	sts	0x0213, r25
+     b32:	80 93 12 02 	sts	0x0212, r24
+			if(data[i+1] == 6)
+     b36:	80 91 1e 02 	lds	r24, 0x021E
+     b3a:	86 30       	cpi	r24, 0x06	; 6
+     b3c:	51 f4       	brne	.+20     	; 0xb52 <main+0x190>
+			{
+				i = 0 ;
+     b3e:	10 92 13 02 	sts	0x0213, r1
+     b42:	10 92 12 02 	sts	0x0212, r1
+				slow_flag = 1 ;
+     b46:	81 e0       	ldi	r24, 0x01	; 1
+     b48:	90 e0       	ldi	r25, 0x00	; 0
+     b4a:	90 93 07 02 	sts	0x0207, r25
+     b4e:	80 93 06 02 	sts	0x0206, r24
+						
+						if ( i != previous_i )		//Condition to execute an instruction only once.
+						{
+													
+							previous_i = i ;
+							f = 1 ;
+     b52:	01 e0       	ldi	r16, 0x01	; 1
+     b54:	10 e0       	ldi	r17, 0x00	; 0
+							switch(data[i])
+     b56:	ce e1       	ldi	r28, 0x1E	; 30
+     b58:	d2 e0       	ldi	r29, 0x02	; 2
+									while( (!L) )
+										{
+											Read_path();
+											left();
+										}
+										last_reading ='r';
+     b5a:	0f 2e       	mov	r0, r31
+     b5c:	f2 e7       	ldi	r31, 0x72	; 114
+     b5e:	ef 2e       	mov	r14, r31
+     b60:	f0 2d       	mov	r31, r0
+										PORTA = 0b01001110;
+     b62:	0f 2e       	mov	r0, r31
+     b64:	fe e4       	ldi	r31, 0x4E	; 78
+     b66:	bf 2e       	mov	r11, r31
+     b68:	f0 2d       	mov	r31, r0
+									while(  (!R && !M) ) 
+										{
+											Read_path();
+											right();
+										}
+										last_reading ='l';
+     b6a:	0f 2e       	mov	r0, r31
+     b6c:	fc e6       	ldi	r31, 0x6C	; 108
+     b6e:	af 2e       	mov	r10, r31
+     b70:	f0 2d       	mov	r31, r0
+										PORTA = 0b10001101;
+     b72:	0f 2e       	mov	r0, r31
+     b74:	fd e8       	ldi	r31, 0x8D	; 141
+     b76:	9f 2e       	mov	r9, r31
+     b78:	f0 2d       	mov	r31, r0
+							else
+							{
+								slow_flag = 0;
+							}
+							//PORTB = 0b00000001;
+							PORTA = 0b01001101;
+     b7a:	0f 2e       	mov	r0, r31
+     b7c:	fd e4       	ldi	r31, 0x4D	; 77
+     b7e:	ff 2e       	mov	r15, r31
+     b80:	f0 2d       	mov	r31, r0
+						Read_path();
+						x:
+						if( (f == 0) && ((ShaftCountLeft >= dist ) || (data[i] == 2)))	//flag will only be 1 if it has experienced the condition (010) left=white  middle=black right=white
+						{
+							if ( dist == 0 )
+								dist = 250 ;
+     b82:	0f 2e       	mov	r0, r31
+     b84:	fa ef       	ldi	r31, 0xFA	; 250
+     b86:	cf 2e       	mov	r12, r31
+     b88:	dd 24       	eor	r13, r13
+     b8a:	f0 2d       	mov	r31, r0
+				i = 0 ;
+				slow_flag = 1 ;
+			} 
+			while(1)
+			{
+				f1 = 0 ;
+     b8c:	10 92 09 02 	sts	0x0209, r1
+     b90:	10 92 08 02 	sts	0x0208, r1
+				Read_path();				//Read path function sets variables L,M,R.
+     b94:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+				if ( (L)&&(M)&&(R) )		//(111)for the condition : left=black  middle=black right=black 
+     b98:	80 91 64 02 	lds	r24, 0x0264
+     b9c:	90 91 65 02 	lds	r25, 0x0265
+     ba0:	00 97       	sbiw	r24, 0x00	; 0
+     ba2:	09 f4       	brne	.+2      	; 0xba6 <main+0x1e4>
+     ba4:	07 c1       	rjmp	.+526    	; 0xdb4 <main+0x3f2>
+     ba6:	80 91 68 02 	lds	r24, 0x0268
+     baa:	90 91 69 02 	lds	r25, 0x0269
+     bae:	00 97       	sbiw	r24, 0x00	; 0
+     bb0:	09 f4       	brne	.+2      	; 0xbb4 <main+0x1f2>
+     bb2:	af c0       	rjmp	.+350    	; 0xd12 <main+0x350>
+     bb4:	80 91 66 02 	lds	r24, 0x0266
+     bb8:	90 91 67 02 	lds	r25, 0x0267
+     bbc:	00 97       	sbiw	r24, 0x00	; 0
+     bbe:	09 f4       	brne	.+2      	; 0xbc2 <main+0x200>
+     bc0:	6c c3       	rjmp	.+1752   	; 0x129a <main+0x8d8>
+				{
+					
+					if ( i == -1 )
+     bc2:	80 91 12 02 	lds	r24, 0x0212
+     bc6:	90 91 13 02 	lds	r25, 0x0213
+     bca:	2f ef       	ldi	r18, 0xFF	; 255
+     bcc:	8f 3f       	cpi	r24, 0xFF	; 255
+     bce:	92 07       	cpc	r25, r18
+     bd0:	c9 f4       	brne	.+50     	; 0xc04 <main+0x242>
+					{
+						while ( (L)&&(M)&&(R) )
+						{
+							
+							Read_path();
+     bd2:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+							forward() ;
+     bd6:	0e 94 c0 00 	call	0x180	; 0x180 <forward>
+				if ( (L)&&(M)&&(R) )		//(111)for the condition : left=black  middle=black right=black 
+				{
+					
+					if ( i == -1 )
+					{
+						while ( (L)&&(M)&&(R) )
+     bda:	80 91 64 02 	lds	r24, 0x0264
+     bde:	90 91 65 02 	lds	r25, 0x0265
+     be2:	00 97       	sbiw	r24, 0x00	; 0
+     be4:	09 f4       	brne	.+2      	; 0xbe8 <main+0x226>
+     be6:	e6 c0       	rjmp	.+460    	; 0xdb4 <main+0x3f2>
+     be8:	80 91 68 02 	lds	r24, 0x0268
+     bec:	90 91 69 02 	lds	r25, 0x0269
+     bf0:	00 97       	sbiw	r24, 0x00	; 0
+     bf2:	09 f4       	brne	.+2      	; 0xbf6 <main+0x234>
+     bf4:	8e c0       	rjmp	.+284    	; 0xd12 <main+0x350>
+     bf6:	80 91 66 02 	lds	r24, 0x0266
+     bfa:	90 91 67 02 	lds	r25, 0x0267
+     bfe:	00 97       	sbiw	r24, 0x00	; 0
+     c00:	41 f7       	brne	.-48     	; 0xbd2 <main+0x210>
+     c02:	4b c3       	rjmp	.+1686   	; 0x129a <main+0x8d8>
+					}
+					else 
+					{
+						while ( ! ( (!L)&&(!M)&&(!R) ) )
+						{
+							Read_path();
+     c04:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+							forward() ;						
+     c08:	0e 94 c0 00 	call	0x180	; 0x180 <forward>
+							forward() ;
+						}
+					}
+					else 
+					{
+						while ( ! ( (!L)&&(!M)&&(!R) ) )
+     c0c:	80 91 64 02 	lds	r24, 0x0264
+     c10:	90 91 65 02 	lds	r25, 0x0265
+     c14:	00 97       	sbiw	r24, 0x00	; 0
+     c16:	b1 f7       	brne	.-20     	; 0xc04 <main+0x242>
+     c18:	80 91 68 02 	lds	r24, 0x0268
+     c1c:	90 91 69 02 	lds	r25, 0x0269
+     c20:	00 97       	sbiw	r24, 0x00	; 0
+     c22:	81 f7       	brne	.-32     	; 0xc04 <main+0x242>
+     c24:	80 91 66 02 	lds	r24, 0x0266
+     c28:	90 91 67 02 	lds	r25, 0x0267
+     c2c:	00 97       	sbiw	r24, 0x00	; 0
+     c2e:	51 f7       	brne	.-44     	; 0xc04 <main+0x242>
+     c30:	c1 c0       	rjmp	.+386    	; 0xdb4 <main+0x3f2>
+						}
+					}					
+				}
+				if( ((L)&&(M)&&(!R)) /*&& ( ShaftCountLeft <= 200)*/ ) 			//(110)for the condition : left=black  middle=black right=white (take left)
+				{
+					f1 = 1 ;
+     c32:	10 93 09 02 	sts	0x0209, r17
+     c36:	00 93 08 02 	sts	0x0208, r16
+					//last_reading ='l';
+					while ((L)&&(M)&&(!R) && timeout_ctr < 250 )
+     c3a:	80 91 64 02 	lds	r24, 0x0264
+     c3e:	90 91 65 02 	lds	r25, 0x0265
+     c42:	00 97       	sbiw	r24, 0x00	; 0
+     c44:	91 f1       	breq	.+100    	; 0xcaa <main+0x2e8>
+     c46:	80 91 68 02 	lds	r24, 0x0268
+     c4a:	90 91 69 02 	lds	r25, 0x0269
+     c4e:	00 97       	sbiw	r24, 0x00	; 0
+     c50:	61 f1       	breq	.+88     	; 0xcaa <main+0x2e8>
+     c52:	80 91 66 02 	lds	r24, 0x0266
+     c56:	90 91 67 02 	lds	r25, 0x0267
+     c5a:	00 97       	sbiw	r24, 0x00	; 0
+     c5c:	31 f5       	brne	.+76     	; 0xcaa <main+0x2e8>
+     c5e:	80 91 04 02 	lds	r24, 0x0204
+     c62:	90 91 05 02 	lds	r25, 0x0205
+     c66:	8a 3f       	cpi	r24, 0xFA	; 250
+     c68:	91 05       	cpc	r25, r1
+     c6a:	08 f0       	brcs	.+2      	; 0xc6e <main+0x2ac>
+     c6c:	7f c1       	rjmp	.+766    	; 0xf6c <main+0x5aa>
+					{
+						
+						Read_path();
+     c6e:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+						soft_left () ;
+     c72:	0e 94 05 02 	call	0x40a	; 0x40a <soft_left>
+				}
+				if( ((L)&&(M)&&(!R)) /*&& ( ShaftCountLeft <= 200)*/ ) 			//(110)for the condition : left=black  middle=black right=white (take left)
+				{
+					f1 = 1 ;
+					//last_reading ='l';
+					while ((L)&&(M)&&(!R) && timeout_ctr < 250 )
+     c76:	80 91 64 02 	lds	r24, 0x0264
+     c7a:	90 91 65 02 	lds	r25, 0x0265
+     c7e:	00 97       	sbiw	r24, 0x00	; 0
+     c80:	a1 f0       	breq	.+40     	; 0xcaa <main+0x2e8>
+     c82:	80 91 68 02 	lds	r24, 0x0268
+     c86:	90 91 69 02 	lds	r25, 0x0269
+     c8a:	00 97       	sbiw	r24, 0x00	; 0
+     c8c:	71 f0       	breq	.+28     	; 0xcaa <main+0x2e8>
+     c8e:	80 91 66 02 	lds	r24, 0x0266
+     c92:	90 91 67 02 	lds	r25, 0x0267
+     c96:	00 97       	sbiw	r24, 0x00	; 0
+     c98:	41 f4       	brne	.+16     	; 0xcaa <main+0x2e8>
+     c9a:	80 91 04 02 	lds	r24, 0x0204
+     c9e:	90 91 05 02 	lds	r25, 0x0205
+     ca2:	8a 3f       	cpi	r24, 0xFA	; 250
+     ca4:	91 05       	cpc	r25, r1
+     ca6:	18 f3       	brcs	.-58     	; 0xc6e <main+0x2ac>
+     ca8:	61 c1       	rjmp	.+706    	; 0xf6c <main+0x5aa>
+					{
+						
+						Read_path();
+						soft_left () ;
+					}
+					if ( timeout_ctr >= 250)
+     caa:	80 91 04 02 	lds	r24, 0x0204
+     cae:	90 91 05 02 	lds	r25, 0x0205
+     cb2:	8a 3f       	cpi	r24, 0xFA	; 250
+     cb4:	91 05       	cpc	r25, r1
+     cb6:	f8 f0       	brcs	.+62     	; 0xcf6 <main+0x334>
+     cb8:	59 c1       	rjmp	.+690    	; 0xf6c <main+0x5aa>
+				else if (((L)&&(M)&&(!R)) /*&& ( ShaftCountLeft > 200)*/ ) 
+				{
+				//	last_reading ='l';
+					while ((L)&&(M)&&(!R))
+					{
+						Read_path();
+     cba:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+						forward () ;
+     cbe:	0e 94 c0 00 	call	0x180	; 0x180 <forward>
+					
+				}
+				else if (((L)&&(M)&&(!R)) /*&& ( ShaftCountLeft > 200)*/ ) 
+				{
+				//	last_reading ='l';
+					while ((L)&&(M)&&(!R))
+     cc2:	80 91 64 02 	lds	r24, 0x0264
+     cc6:	90 91 65 02 	lds	r25, 0x0265
+     cca:	00 97       	sbiw	r24, 0x00	; 0
+     ccc:	61 f0       	breq	.+24     	; 0xce6 <main+0x324>
+     cce:	80 91 68 02 	lds	r24, 0x0268
+     cd2:	90 91 69 02 	lds	r25, 0x0269
+     cd6:	00 97       	sbiw	r24, 0x00	; 0
+     cd8:	31 f0       	breq	.+12     	; 0xce6 <main+0x324>
+     cda:	80 91 66 02 	lds	r24, 0x0266
+     cde:	90 91 67 02 	lds	r25, 0x0267
+     ce2:	00 97       	sbiw	r24, 0x00	; 0
+     ce4:	51 f3       	breq	.-44     	; 0xcba <main+0x2f8>
+					{
+						Read_path();
+						forward () ;
+					}	
+					PORTA = 0b01001101 ;
+     ce6:	f2 b8       	out	0x02, r15	; 2
+     ce8:	8f ef       	ldi	r24, 0xFF	; 255
+     cea:	9f e8       	ldi	r25, 0x8F	; 143
+     cec:	01 97       	sbiw	r24, 0x01	; 1
+     cee:	f1 f7       	brne	.-4      	; 0xcec <main+0x32a>
+     cf0:	00 c0       	rjmp	.+0      	; 0xcf2 <main+0x330>
+     cf2:	00 00       	nop
+					_delay_ms ( 10 ) ;
+					PORTA = 0b00000000 ;
+     cf4:	12 b8       	out	0x02, r1	; 2
+					{
+						flag = 1 ;			//*set flag to 1*
+					}	*/				
+				}
+									
+				if((L)&&(!M)&&(R))			//(101)for the condition : left=black  middle=white right=black 
+     cf6:	80 91 64 02 	lds	r24, 0x0264
+     cfa:	90 91 65 02 	lds	r25, 0x0265
+     cfe:	00 97       	sbiw	r24, 0x00	; 0
+     d00:	09 f4       	brne	.+2      	; 0xd04 <main+0x342>
+     d02:	58 c0       	rjmp	.+176    	; 0xdb4 <main+0x3f2>
+     d04:	80 91 68 02 	lds	r24, 0x0268
+     d08:	90 91 69 02 	lds	r25, 0x0269
+     d0c:	00 97       	sbiw	r24, 0x00	; 0
+     d0e:	09 f0       	breq	.+2      	; 0xd12 <main+0x350>
+     d10:	3d cf       	rjmp	.-390    	; 0xb8c <main+0x1ca>
+     d12:	80 91 66 02 	lds	r24, 0x0266
+     d16:	90 91 67 02 	lds	r25, 0x0267
+     d1a:	00 97       	sbiw	r24, 0x00	; 0
+     d1c:	09 f4       	brne	.+2      	; 0xd20 <main+0x35e>
+     d1e:	c5 c2       	rjmp	.+1418   	; 0x12aa <main+0x8e8>
+				{
+					while ( ! ( (!L)&&(!M)&&(!R) ) )
+					{
+						Read_path();
+     d20:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+						forward() ;
+     d24:	0e 94 c0 00 	call	0x180	; 0x180 <forward>
+					}	*/				
+				}
+									
+				if((L)&&(!M)&&(R))			//(101)for the condition : left=black  middle=white right=black 
+				{
+					while ( ! ( (!L)&&(!M)&&(!R) ) )
+     d28:	80 91 64 02 	lds	r24, 0x0264
+     d2c:	90 91 65 02 	lds	r25, 0x0265
+     d30:	00 97       	sbiw	r24, 0x00	; 0
+     d32:	b1 f7       	brne	.-20     	; 0xd20 <main+0x35e>
+     d34:	80 91 68 02 	lds	r24, 0x0268
+     d38:	90 91 69 02 	lds	r25, 0x0269
+     d3c:	00 97       	sbiw	r24, 0x00	; 0
+     d3e:	81 f7       	brne	.-32     	; 0xd20 <main+0x35e>
+     d40:	80 91 66 02 	lds	r24, 0x0266
+     d44:	90 91 67 02 	lds	r25, 0x0267
+     d48:	00 97       	sbiw	r24, 0x00	; 0
+     d4a:	51 f7       	brne	.-44     	; 0xd20 <main+0x35e>
+     d4c:	33 c0       	rjmp	.+102    	; 0xdb4 <main+0x3f2>
+				
+				if( ((L)&&(!M)&&(!R)) /*&& ( ShaftCountLeft <= 200)*/ )			//(100)for the condition : left=black  middle=white right=white
+				{
+					//last_reading ='l';
+					
+					while ((L)&&(!M)&&(!R) && timeout_ctr < 100 )
+     d4e:	80 91 04 02 	lds	r24, 0x0204
+     d52:	90 91 05 02 	lds	r25, 0x0205
+     d56:	84 36       	cpi	r24, 0x64	; 100
+     d58:	91 05       	cpc	r25, r1
+     d5a:	08 f0       	brcs	.+2      	; 0xd5e <main+0x39c>
+     d5c:	07 c1       	rjmp	.+526    	; 0xf6c <main+0x5aa>
+					{
+						
+						Read_path();
+     d5e:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+						soft_left();
+     d62:	0e 94 05 02 	call	0x40a	; 0x40a <soft_left>
+				
+				if( ((L)&&(!M)&&(!R)) /*&& ( ShaftCountLeft <= 200)*/ )			//(100)for the condition : left=black  middle=white right=white
+				{
+					//last_reading ='l';
+					
+					while ((L)&&(!M)&&(!R) && timeout_ctr < 100 )
+     d66:	20 91 64 02 	lds	r18, 0x0264
+     d6a:	30 91 65 02 	lds	r19, 0x0265
+     d6e:	21 15       	cp	r18, r1
+     d70:	31 05       	cpc	r19, r1
+     d72:	a1 f0       	breq	.+40     	; 0xd9c <main+0x3da>
+     d74:	80 91 68 02 	lds	r24, 0x0268
+     d78:	90 91 69 02 	lds	r25, 0x0269
+     d7c:	00 97       	sbiw	r24, 0x00	; 0
+     d7e:	71 f4       	brne	.+28     	; 0xd9c <main+0x3da>
+     d80:	80 91 66 02 	lds	r24, 0x0266
+     d84:	90 91 67 02 	lds	r25, 0x0267
+     d88:	00 97       	sbiw	r24, 0x00	; 0
+     d8a:	41 f4       	brne	.+16     	; 0xd9c <main+0x3da>
+     d8c:	80 91 04 02 	lds	r24, 0x0204
+     d90:	90 91 05 02 	lds	r25, 0x0205
+     d94:	84 36       	cpi	r24, 0x64	; 100
+     d96:	91 05       	cpc	r25, r1
+     d98:	10 f3       	brcs	.-60     	; 0xd5e <main+0x39c>
+     d9a:	e8 c0       	rjmp	.+464    	; 0xf6c <main+0x5aa>
+					{
+						
+						Read_path();
+						soft_left();
+					}
+					if ( timeout_ctr >= 100)
+     d9c:	80 91 04 02 	lds	r24, 0x0204
+     da0:	90 91 05 02 	lds	r25, 0x0205
+     da4:	84 36       	cpi	r24, 0x64	; 100
+     da6:	91 05       	cpc	r25, r1
+     da8:	08 f0       	brcs	.+2      	; 0xdac <main+0x3ea>
+     daa:	e0 c0       	rjmp	.+448    	; 0xf6c <main+0x5aa>
+					{
+						flag = 1 ;			//*set flag to 1*
+					}
+				}*/
+				
+				if ( ((!L)&&(M)&&(R)) /*&& ( ShaftCountLeft <= 200)*/ )			//(011)for the condition : left=white  middle=black right=black
+     dac:	21 15       	cp	r18, r1
+     dae:	31 05       	cpc	r19, r1
+     db0:	09 f0       	breq	.+2      	; 0xdb4 <main+0x3f2>
+     db2:	ec ce       	rjmp	.-552    	; 0xb8c <main+0x1ca>
+     db4:	80 91 68 02 	lds	r24, 0x0268
+     db8:	90 91 69 02 	lds	r25, 0x0269
+     dbc:	00 97       	sbiw	r24, 0x00	; 0
+     dbe:	09 f4       	brne	.+2      	; 0xdc2 <main+0x400>
+     dc0:	8d c0       	rjmp	.+282    	; 0xedc <main+0x51a>
+     dc2:	80 91 66 02 	lds	r24, 0x0266
+     dc6:	90 91 67 02 	lds	r25, 0x0267
+     dca:	00 97       	sbiw	r24, 0x00	; 0
+     dcc:	09 f4       	brne	.+2      	; 0xdd0 <main+0x40e>
+     dce:	51 c0       	rjmp	.+162    	; 0xe72 <main+0x4b0>
+				{
+					f1 = 1 ;
+     dd0:	10 93 09 02 	sts	0x0209, r17
+     dd4:	00 93 08 02 	sts	0x0208, r16
+					//last_reading ='r';
+					while ((!L)&&(M)&&(R) && timeout_ctr < 100)
+     dd8:	80 91 64 02 	lds	r24, 0x0264
+     ddc:	90 91 65 02 	lds	r25, 0x0265
+     de0:	00 97       	sbiw	r24, 0x00	; 0
+     de2:	91 f5       	brne	.+100    	; 0xe48 <main+0x486>
+     de4:	80 91 68 02 	lds	r24, 0x0268
+     de8:	90 91 69 02 	lds	r25, 0x0269
+     dec:	00 97       	sbiw	r24, 0x00	; 0
+     dee:	61 f1       	breq	.+88     	; 0xe48 <main+0x486>
+     df0:	80 91 66 02 	lds	r24, 0x0266
+     df4:	90 91 67 02 	lds	r25, 0x0267
+     df8:	00 97       	sbiw	r24, 0x00	; 0
+     dfa:	31 f1       	breq	.+76     	; 0xe48 <main+0x486>
+     dfc:	80 91 04 02 	lds	r24, 0x0204
+     e00:	90 91 05 02 	lds	r25, 0x0205
+     e04:	84 36       	cpi	r24, 0x64	; 100
+     e06:	91 05       	cpc	r25, r1
+     e08:	08 f0       	brcs	.+2      	; 0xe0c <main+0x44a>
+     e0a:	b0 c0       	rjmp	.+352    	; 0xf6c <main+0x5aa>
+					{
+						
+						Read_path();
+     e0c:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+						soft_right () ;
+     e10:	0e 94 8c 01 	call	0x318	; 0x318 <soft_right>
+				
+				if ( ((!L)&&(M)&&(R)) /*&& ( ShaftCountLeft <= 200)*/ )			//(011)for the condition : left=white  middle=black right=black
+				{
+					f1 = 1 ;
+					//last_reading ='r';
+					while ((!L)&&(M)&&(R) && timeout_ctr < 100)
+     e14:	80 91 64 02 	lds	r24, 0x0264
+     e18:	90 91 65 02 	lds	r25, 0x0265
+     e1c:	00 97       	sbiw	r24, 0x00	; 0
+     e1e:	a1 f4       	brne	.+40     	; 0xe48 <main+0x486>
+     e20:	80 91 68 02 	lds	r24, 0x0268
+     e24:	90 91 69 02 	lds	r25, 0x0269
+     e28:	00 97       	sbiw	r24, 0x00	; 0
+     e2a:	71 f0       	breq	.+28     	; 0xe48 <main+0x486>
+     e2c:	80 91 66 02 	lds	r24, 0x0266
+     e30:	90 91 67 02 	lds	r25, 0x0267
+     e34:	00 97       	sbiw	r24, 0x00	; 0
+     e36:	41 f0       	breq	.+16     	; 0xe48 <main+0x486>
+     e38:	80 91 04 02 	lds	r24, 0x0204
+     e3c:	90 91 05 02 	lds	r25, 0x0205
+     e40:	84 36       	cpi	r24, 0x64	; 100
+     e42:	91 05       	cpc	r25, r1
+     e44:	18 f3       	brcs	.-58     	; 0xe0c <main+0x44a>
+     e46:	92 c0       	rjmp	.+292    	; 0xf6c <main+0x5aa>
+					{
+						
+						Read_path();
+						soft_right () ;
+					}
+					if ( timeout_ctr >= 100)
+     e48:	80 91 04 02 	lds	r24, 0x0204
+     e4c:	90 91 05 02 	lds	r25, 0x0205
+     e50:	84 36       	cpi	r24, 0x64	; 100
+     e52:	91 05       	cpc	r25, r1
+     e54:	08 f0       	brcs	.+2      	; 0xe58 <main+0x496>
+     e56:	8a c0       	rjmp	.+276    	; 0xf6c <main+0x5aa>
+					{
+						flag = 1 ;			//*set flag to 1*
+					}
+				}*/
+				
+				if ((!L)&&(M)&&(!R))		//(010)for the condition : left=white  middle=black right=white
+     e58:	80 91 64 02 	lds	r24, 0x0264
+     e5c:	90 91 65 02 	lds	r25, 0x0265
+     e60:	00 97       	sbiw	r24, 0x00	; 0
+     e62:	09 f0       	breq	.+2      	; 0xe66 <main+0x4a4>
+     e64:	93 ce       	rjmp	.-730    	; 0xb8c <main+0x1ca>
+     e66:	80 91 68 02 	lds	r24, 0x0268
+     e6a:	90 91 69 02 	lds	r25, 0x0269
+     e6e:	00 97       	sbiw	r24, 0x00	; 0
+     e70:	a9 f1       	breq	.+106    	; 0xedc <main+0x51a>
+     e72:	80 91 66 02 	lds	r24, 0x0266
+     e76:	90 91 67 02 	lds	r25, 0x0267
+     e7a:	00 97       	sbiw	r24, 0x00	; 0
+     e7c:	09 f0       	breq	.+2      	; 0xe80 <main+0x4be>
+     e7e:	86 ce       	rjmp	.-756    	; 0xb8c <main+0x1ca>
+				{
+					while ((!L)&&(M)&&(!R))
+					{
+						Read_path();
+     e80:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+						forward () ;
+     e84:	0e 94 c0 00 	call	0x180	; 0x180 <forward>
+					}
+				}*/
+				
+				if ((!L)&&(M)&&(!R))		//(010)for the condition : left=white  middle=black right=white
+				{
+					while ((!L)&&(M)&&(!R))
+     e88:	80 91 64 02 	lds	r24, 0x0264
+     e8c:	90 91 65 02 	lds	r25, 0x0265
+     e90:	00 97       	sbiw	r24, 0x00	; 0
+     e92:	61 f4       	brne	.+24     	; 0xeac <main+0x4ea>
+     e94:	80 91 68 02 	lds	r24, 0x0268
+     e98:	90 91 69 02 	lds	r25, 0x0269
+     e9c:	00 97       	sbiw	r24, 0x00	; 0
+     e9e:	31 f0       	breq	.+12     	; 0xeac <main+0x4ea>
+     ea0:	80 91 66 02 	lds	r24, 0x0266
+     ea4:	90 91 67 02 	lds	r25, 0x0267
+     ea8:	00 97       	sbiw	r24, 0x00	; 0
+     eaa:	51 f3       	breq	.-44     	; 0xe80 <main+0x4be>
+					{
+						Read_path();
+						forward () ;
+					}
+
+					if ( flag == 0 )
+     eac:	80 91 0c 02 	lds	r24, 0x020C
+     eb0:	90 91 0d 02 	lds	r25, 0x020D
+     eb4:	00 97       	sbiw	r24, 0x00	; 0
+     eb6:	21 f4       	brne	.+8      	; 0xec0 <main+0x4fe>
+					{
+						flag = 1 ;			//*set flag to 1*
+     eb8:	10 93 0d 02 	sts	0x020D, r17
+     ebc:	00 93 0c 02 	sts	0x020C, r16
+					}
+										
+				}
+				
+				if ( ((!L)&&(!M)&&(R)) /*&& ( ShaftCountLeft <= 200)*/ )		//001for the condition : left=white  middle=white right=black
+     ec0:	80 91 64 02 	lds	r24, 0x0264
+     ec4:	90 91 65 02 	lds	r25, 0x0265
+     ec8:	00 97       	sbiw	r24, 0x00	; 0
+     eca:	09 f0       	breq	.+2      	; 0xece <main+0x50c>
+     ecc:	5f ce       	rjmp	.-834    	; 0xb8c <main+0x1ca>
+     ece:	80 91 68 02 	lds	r24, 0x0268
+     ed2:	90 91 69 02 	lds	r25, 0x0269
+     ed6:	00 97       	sbiw	r24, 0x00	; 0
+     ed8:	09 f0       	breq	.+2      	; 0xedc <main+0x51a>
+     eda:	58 ce       	rjmp	.-848    	; 0xb8c <main+0x1ca>
+     edc:	80 91 66 02 	lds	r24, 0x0266
+     ee0:	90 91 67 02 	lds	r25, 0x0267
+     ee4:	00 97       	sbiw	r24, 0x00	; 0
+     ee6:	c1 f1       	breq	.+112    	; 0xf58 <main+0x596>
+				{
+					//last_reading ='r';
+					
+					while ((!L)&&(!M)&&(R) && timeout_ctr < 250 )
+     ee8:	80 91 04 02 	lds	r24, 0x0204
+     eec:	90 91 05 02 	lds	r25, 0x0205
+     ef0:	8a 3f       	cpi	r24, 0xFA	; 250
+     ef2:	91 05       	cpc	r25, r1
+     ef4:	d8 f5       	brcc	.+118    	; 0xf6c <main+0x5aa>
+					{
+						
+						Read_path();
+     ef6:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+						soft_right () ;
+     efa:	0e 94 8c 01 	call	0x318	; 0x318 <soft_right>
+				
+				if ( ((!L)&&(!M)&&(R)) /*&& ( ShaftCountLeft <= 200)*/ )		//001for the condition : left=white  middle=white right=black
+				{
+					//last_reading ='r';
+					
+					while ((!L)&&(!M)&&(R) && timeout_ctr < 250 )
+     efe:	20 91 64 02 	lds	r18, 0x0264
+     f02:	30 91 65 02 	lds	r19, 0x0265
+     f06:	21 15       	cp	r18, r1
+     f08:	31 05       	cpc	r19, r1
+     f0a:	a1 f4       	brne	.+40     	; 0xf34 <main+0x572>
+     f0c:	80 91 68 02 	lds	r24, 0x0268
+     f10:	90 91 69 02 	lds	r25, 0x0269
+     f14:	00 97       	sbiw	r24, 0x00	; 0
+     f16:	71 f4       	brne	.+28     	; 0xf34 <main+0x572>
+     f18:	80 91 66 02 	lds	r24, 0x0266
+     f1c:	90 91 67 02 	lds	r25, 0x0267
+     f20:	00 97       	sbiw	r24, 0x00	; 0
+     f22:	41 f0       	breq	.+16     	; 0xf34 <main+0x572>
+     f24:	80 91 04 02 	lds	r24, 0x0204
+     f28:	90 91 05 02 	lds	r25, 0x0205
+     f2c:	8a 3f       	cpi	r24, 0xFA	; 250
+     f2e:	91 05       	cpc	r25, r1
+     f30:	10 f3       	brcs	.-60     	; 0xef6 <main+0x534>
+     f32:	1c c0       	rjmp	.+56     	; 0xf6c <main+0x5aa>
+					{
+						
+						Read_path();
+						soft_right () ;
+					}
+					if ( timeout_ctr >= 250 )
+     f34:	80 91 04 02 	lds	r24, 0x0204
+     f38:	90 91 05 02 	lds	r25, 0x0205
+     f3c:	8a 3f       	cpi	r24, 0xFA	; 250
+     f3e:	91 05       	cpc	r25, r1
+     f40:	a8 f4       	brcc	.+42     	; 0xf6c <main+0x5aa>
+						flag = 1 ;			//set flag to 1*
+					}
+				}
+				*/
+				
+				if ((!L)&&(!M)&&(!R))		//000for the condition : left=white  middle=white right=white
+     f42:	21 15       	cp	r18, r1
+     f44:	31 05       	cpc	r19, r1
+     f46:	09 f0       	breq	.+2      	; 0xf4a <main+0x588>
+     f48:	21 ce       	rjmp	.-958    	; 0xb8c <main+0x1ca>
+     f4a:	80 91 68 02 	lds	r24, 0x0268
+     f4e:	90 91 69 02 	lds	r25, 0x0269
+     f52:	00 97       	sbiw	r24, 0x00	; 0
+     f54:	09 f0       	breq	.+2      	; 0xf58 <main+0x596>
+     f56:	1a ce       	rjmp	.-972    	; 0xb8c <main+0x1ca>
+     f58:	80 91 66 02 	lds	r24, 0x0266
+     f5c:	90 91 67 02 	lds	r25, 0x0267
+     f60:	00 97       	sbiw	r24, 0x00	; 0
+     f62:	09 f4       	brne	.+2      	; 0xf66 <main+0x5a4>
+     f64:	8e c1       	rjmp	.+796    	; 0x1282 <main+0x8c0>
+     f66:	12 ce       	rjmp	.-988    	; 0xb8c <main+0x1ca>
+				{
+					while((!L)&&(!M)&&(!R))
+					{
+						Read_path();
+     f68:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+						x:
+						if( (f == 0) && ((ShaftCountLeft >= dist ) || (data[i] == 2)))	//flag will only be 1 if it has experienced the condition (010) left=white  middle=black right=white
+     f6c:	80 91 0a 02 	lds	r24, 0x020A
+     f70:	90 91 0b 02 	lds	r25, 0x020B
+     f74:	00 97       	sbiw	r24, 0x00	; 0
+     f76:	09 f0       	breq	.+2      	; 0xf7a <main+0x5b8>
+     f78:	91 c0       	rjmp	.+290    	; 0x109c <main+0x6da>
+     f7a:	20 91 1c 02 	lds	r18, 0x021C
+     f7e:	30 91 1d 02 	lds	r19, 0x021D
+     f82:	c9 01       	movw	r24, r18
+     f84:	aa 27       	eor	r26, r26
+     f86:	97 fd       	sbrc	r25, 7
+     f88:	a0 95       	com	r26
+     f8a:	ba 2f       	mov	r27, r26
+     f8c:	40 91 0e 02 	lds	r20, 0x020E
+     f90:	50 91 0f 02 	lds	r21, 0x020F
+     f94:	60 91 10 02 	lds	r22, 0x0210
+     f98:	70 91 11 02 	lds	r23, 0x0211
+     f9c:	48 17       	cp	r20, r24
+     f9e:	59 07       	cpc	r21, r25
+     fa0:	6a 07       	cpc	r22, r26
+     fa2:	7b 07       	cpc	r23, r27
+     fa4:	54 f4       	brge	.+20     	; 0xfba <main+0x5f8>
+     fa6:	e0 91 12 02 	lds	r30, 0x0212
+     faa:	f0 91 13 02 	lds	r31, 0x0213
+     fae:	ec 0f       	add	r30, r28
+     fb0:	fd 1f       	adc	r31, r29
+     fb2:	80 81       	ld	r24, Z
+     fb4:	82 30       	cpi	r24, 0x02	; 2
+     fb6:	09 f0       	breq	.+2      	; 0xfba <main+0x5f8>
+     fb8:	71 c0       	rjmp	.+226    	; 0x109c <main+0x6da>
+						{
+							if ( dist == 0 )
+     fba:	21 15       	cp	r18, r1
+     fbc:	31 05       	cpc	r19, r1
+     fbe:	21 f4       	brne	.+8      	; 0xfc8 <main+0x606>
+								dist = 250 ;
+     fc0:	d0 92 1d 02 	sts	0x021D, r13
+     fc4:	c0 92 1c 02 	sts	0x021C, r12
+							i++;			//increment the index.
+     fc8:	e0 91 12 02 	lds	r30, 0x0212
+     fcc:	f0 91 13 02 	lds	r31, 0x0213
+     fd0:	cf 01       	movw	r24, r30
+     fd2:	01 96       	adiw	r24, 0x01	; 1
+     fd4:	90 93 13 02 	sts	0x0213, r25
+     fd8:	80 93 12 02 	sts	0x0212, r24
+							if(data[i] == 6)
+     fdc:	8c 0f       	add	r24, r28
+     fde:	9d 1f       	adc	r25, r29
+     fe0:	dc 01       	movw	r26, r24
+     fe2:	8c 91       	ld	r24, X
+     fe4:	86 30       	cpi	r24, 0x06	; 6
+     fe6:	89 f4       	brne	.+34     	; 0x100a <main+0x648>
+Input :			None
+Output :		Makes the bot to execute all the instructions.
+Logic :			It takes the instruction array by using the uart_rx function and iterates through the instruction and executes it.
+Example Call :  Called automatically by the OS.
+*/
+int main(void)
+     fe8:	e0 5e       	subi	r30, 0xE0	; 224
+     fea:	fd 4f       	sbci	r31, 0xFD	; 253
+     fec:	cf 01       	movw	r24, r30
+     fee:	8e 51       	subi	r24, 0x1E	; 30
+     ff0:	92 40       	sbci	r25, 0x02	; 2
+							if ( dist == 0 )
+								dist = 250 ;
+							i++;			//increment the index.
+							if(data[i] == 6)
+							{
+								while(data[i] == 6)
+     ff2:	21 91       	ld	r18, Z+
+     ff4:	26 30       	cpi	r18, 0x06	; 6
+     ff6:	d1 f3       	breq	.-12     	; 0xfec <main+0x62a>
+     ff8:	90 93 13 02 	sts	0x0213, r25
+     ffc:	80 93 12 02 	sts	0x0212, r24
+    1000:	10 93 07 02 	sts	0x0207, r17
+    1004:	00 93 06 02 	sts	0x0206, r16
+    1008:	04 c0       	rjmp	.+8      	; 0x1012 <main+0x650>
+									i++;
+								}
+							}								
+							else
+							{
+								slow_flag = 0;
+    100a:	10 92 07 02 	sts	0x0207, r1
+    100e:	10 92 06 02 	sts	0x0206, r1
+							}
+							//PORTB = 0b00000001;
+							PORTA = 0b01001101;
+    1012:	f2 b8       	out	0x02, r15	; 2
+							if((data[i+1] == 3) || (data[i] == 3))
+    1014:	80 91 12 02 	lds	r24, 0x0212
+    1018:	90 91 13 02 	lds	r25, 0x0213
+    101c:	fe 01       	movw	r30, r28
+    101e:	e8 0f       	add	r30, r24
+    1020:	f9 1f       	adc	r31, r25
+    1022:	21 81       	ldd	r18, Z+1	; 0x01
+    1024:	23 30       	cpi	r18, 0x03	; 3
+    1026:	19 f0       	breq	.+6      	; 0x102e <main+0x66c>
+    1028:	80 81       	ld	r24, Z
+    102a:	83 30       	cpi	r24, 0x03	; 3
+    102c:	39 f4       	brne	.+14     	; 0x103c <main+0x67a>
+    102e:	8f ef       	ldi	r24, 0xFF	; 255
+    1030:	97 e4       	ldi	r25, 0x47	; 71
+    1032:	01 97       	sbiw	r24, 0x01	; 1
+    1034:	f1 f7       	brne	.-4      	; 0x1032 <main+0x670>
+    1036:	00 c0       	rjmp	.+0      	; 0x1038 <main+0x676>
+    1038:	00 00       	nop
+    103a:	06 c0       	rjmp	.+12     	; 0x1048 <main+0x686>
+    103c:	af ef       	ldi	r26, 0xFF	; 255
+    103e:	bf e8       	ldi	r27, 0x8F	; 143
+    1040:	11 97       	sbiw	r26, 0x01	; 1
+    1042:	f1 f7       	brne	.-4      	; 0x1040 <main+0x67e>
+    1044:	00 c0       	rjmp	.+0      	; 0x1046 <main+0x684>
+    1046:	00 00       	nop
+							_delay_ms(5);
+							else
+							_delay_ms(10);
+							PORTA = 0b00000000;
+    1048:	12 b8       	out	0x02, r1	; 2
+							if((data[i+1] == 3) || (data[i] == 3))
+    104a:	80 91 12 02 	lds	r24, 0x0212
+    104e:	90 91 13 02 	lds	r25, 0x0213
+    1052:	fe 01       	movw	r30, r28
+    1054:	e8 0f       	add	r30, r24
+    1056:	f9 1f       	adc	r31, r25
+    1058:	21 81       	ldd	r18, Z+1	; 0x01
+    105a:	23 30       	cpi	r18, 0x03	; 3
+    105c:	19 f0       	breq	.+6      	; 0x1064 <main+0x6a2>
+    105e:	80 81       	ld	r24, Z
+    1060:	83 30       	cpi	r24, 0x03	; 3
+    1062:	41 f4       	brne	.+16     	; 0x1074 <main+0x6b2>
+    1064:	86 e6       	ldi	r24, 0x66	; 102
+    1066:	96 e4       	ldi	r25, 0x46	; 70
+    1068:	a4 e0       	ldi	r26, 0x04	; 4
+    106a:	81 50       	subi	r24, 0x01	; 1
+    106c:	90 40       	sbci	r25, 0x00	; 0
+    106e:	a0 40       	sbci	r26, 0x00	; 0
+    1070:	e1 f7       	brne	.-8      	; 0x106a <main+0x6a8>
+    1072:	08 c0       	rjmp	.+16     	; 0x1084 <main+0x6c2>
+    1074:	8c ec       	ldi	r24, 0xCC	; 204
+    1076:	9c e0       	ldi	r25, 0x0C	; 12
+    1078:	a4 e0       	ldi	r26, 0x04	; 4
+    107a:	81 50       	subi	r24, 0x01	; 1
+    107c:	90 40       	sbci	r25, 0x00	; 0
+    107e:	a0 40       	sbci	r26, 0x00	; 0
+    1080:	e1 f7       	brne	.-8      	; 0x107a <main+0x6b8>
+    1082:	00 c0       	rjmp	.+0      	; 0x1084 <main+0x6c2>
+							_delay_ms(95);
+							else
+							_delay_ms(90);
+							//PORTB = 0b00000000;
+							ShaftCountLeft = 0 ;
+    1084:	10 92 0e 02 	sts	0x020E, r1
+    1088:	10 92 0f 02 	sts	0x020F, r1
+    108c:	10 92 10 02 	sts	0x0210, r1
+    1090:	10 92 11 02 	sts	0x0211, r1
+							f = 1 ;
+    1094:	10 93 0b 02 	sts	0x020B, r17
+    1098:	00 93 0a 02 	sts	0x020A, r16
+						}
+						
+						
+						if ( i != previous_i )		//Condition to execute an instruction only once.
+    109c:	20 91 12 02 	lds	r18, 0x0212
+    10a0:	30 91 13 02 	lds	r19, 0x0213
+    10a4:	80 91 02 02 	lds	r24, 0x0202
+    10a8:	90 91 03 02 	lds	r25, 0x0203
+    10ac:	28 17       	cp	r18, r24
+    10ae:	39 07       	cpc	r19, r25
+    10b0:	09 f4       	brne	.+2      	; 0x10b4 <main+0x6f2>
+    10b2:	db c0       	rjmp	.+438    	; 0x126a <main+0x8a8>
+						{
+													
+							previous_i = i ;
+    10b4:	30 93 03 02 	sts	0x0203, r19
+    10b8:	20 93 02 02 	sts	0x0202, r18
+							f = 1 ;
+    10bc:	10 93 0b 02 	sts	0x020B, r17
+    10c0:	00 93 0a 02 	sts	0x020A, r16
+							switch(data[i])
+    10c4:	fe 01       	movw	r30, r28
+    10c6:	e2 0f       	add	r30, r18
+    10c8:	f3 1f       	adc	r31, r19
+    10ca:	80 81       	ld	r24, Z
+    10cc:	82 30       	cpi	r24, 0x02	; 2
+    10ce:	09 f4       	brne	.+2      	; 0x10d2 <main+0x710>
+    10d0:	72 c0       	rjmp	.+228    	; 0x11b6 <main+0x7f4>
+    10d2:	83 30       	cpi	r24, 0x03	; 3
+    10d4:	30 f4       	brcc	.+12     	; 0x10e2 <main+0x720>
+    10d6:	88 23       	and	r24, r24
+    10d8:	d9 f0       	breq	.+54     	; 0x1110 <main+0x74e>
+    10da:	81 30       	cpi	r24, 0x01	; 1
+    10dc:	09 f0       	breq	.+2      	; 0x10e0 <main+0x71e>
+    10de:	c5 c0       	rjmp	.+394    	; 0x126a <main+0x8a8>
+    10e0:	0a c0       	rjmp	.+20     	; 0x10f6 <main+0x734>
+    10e2:	84 30       	cpi	r24, 0x04	; 4
+    10e4:	09 f4       	brne	.+2      	; 0x10e8 <main+0x726>
+    10e6:	a9 c0       	rjmp	.+338    	; 0x123a <main+0x878>
+    10e8:	84 30       	cpi	r24, 0x04	; 4
+    10ea:	08 f4       	brcc	.+2      	; 0x10ee <main+0x72c>
+    10ec:	72 c0       	rjmp	.+228    	; 0x11d2 <main+0x810>
+    10ee:	85 30       	cpi	r24, 0x05	; 5
+    10f0:	09 f0       	breq	.+2      	; 0x10f4 <main+0x732>
+    10f2:	bb c0       	rjmp	.+374    	; 0x126a <main+0x8a8>
+    10f4:	67 c0       	rjmp	.+206    	; 0x11c4 <main+0x802>
+							{
+								case 1:						//1 stands for right
+									while(  (!R && !M) ) 
+    10f6:	80 91 66 02 	lds	r24, 0x0266
+    10fa:	90 91 67 02 	lds	r25, 0x0267
+    10fe:	00 97       	sbiw	r24, 0x00	; 0
+    1100:	f1 f4       	brne	.+60     	; 0x113e <main+0x77c>
+    1102:	80 91 68 02 	lds	r24, 0x0268
+    1106:	90 91 69 02 	lds	r25, 0x0269
+    110a:	00 97       	sbiw	r24, 0x00	; 0
+    110c:	41 f0       	breq	.+16     	; 0x111e <main+0x75c>
+    110e:	17 c0       	rjmp	.+46     	; 0x113e <main+0x77c>
+										stop();
+										ShaftCountLeft = 0;
+										flag = 0;		//flag set to 0(it will be again set to 1 only for the condition (010) left=white  middle=black right=white)
+									break;
+								case 0:							//0 stands for left
+									while( (!L) )
+    1110:	80 91 64 02 	lds	r24, 0x0264
+    1114:	90 91 65 02 	lds	r25, 0x0265
+    1118:	00 97       	sbiw	r24, 0x00	; 0
+    111a:	51 f1       	breq	.+84     	; 0x1170 <main+0x7ae>
+    111c:	33 c0       	rjmp	.+102    	; 0x1184 <main+0x7c2>
+							switch(data[i])
+							{
+								case 1:						//1 stands for right
+									while(  (!R && !M) ) 
+										{
+											Read_path();
+    111e:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+											right();
+    1122:	0e 94 5f 01 	call	0x2be	; 0x2be <right>
+							previous_i = i ;
+							f = 1 ;
+							switch(data[i])
+							{
+								case 1:						//1 stands for right
+									while(  (!R && !M) ) 
+    1126:	80 91 66 02 	lds	r24, 0x0266
+    112a:	90 91 67 02 	lds	r25, 0x0267
+    112e:	00 97       	sbiw	r24, 0x00	; 0
+    1130:	31 f4       	brne	.+12     	; 0x113e <main+0x77c>
+    1132:	80 91 68 02 	lds	r24, 0x0268
+    1136:	90 91 69 02 	lds	r25, 0x0269
+    113a:	00 97       	sbiw	r24, 0x00	; 0
+    113c:	81 f3       	breq	.-32     	; 0x111e <main+0x75c>
+										{
+											Read_path();
+											right();
+										}
+										last_reading ='l';
+    113e:	a0 92 00 02 	sts	0x0200, r10
+										PORTA = 0b10001101;
+    1142:	92 b8       	out	0x02, r9	; 2
+    1144:	af ef       	ldi	r26, 0xFF	; 255
+    1146:	bf e8       	ldi	r27, 0x8F	; 143
+    1148:	11 97       	sbiw	r26, 0x01	; 1
+    114a:	f1 f7       	brne	.-4      	; 0x1148 <main+0x786>
+    114c:	00 c0       	rjmp	.+0      	; 0x114e <main+0x78c>
+    114e:	00 00       	nop
+										_delay_ms ( 10 ) ;
+										PORTA = 0b00000000;
+    1150:	12 b8       	out	0x02, r1	; 2
+										stop();
+    1152:	0e 94 7e 02 	call	0x4fc	; 0x4fc <stop>
+										ShaftCountLeft = 0;
+    1156:	10 92 0e 02 	sts	0x020E, r1
+    115a:	10 92 0f 02 	sts	0x020F, r1
+    115e:	10 92 10 02 	sts	0x0210, r1
+    1162:	10 92 11 02 	sts	0x0211, r1
+										flag = 0;		//flag set to 0(it will be again set to 1 only for the condition (010) left=white  middle=black right=white)
+    1166:	10 92 0d 02 	sts	0x020D, r1
+    116a:	10 92 0c 02 	sts	0x020C, r1
+									break;
+    116e:	7d c0       	rjmp	.+250    	; 0x126a <main+0x8a8>
+								case 0:							//0 stands for left
+									while( (!L) )
+										{
+											Read_path();
+    1170:	0e 94 d4 02 	call	0x5a8	; 0x5a8 <Read_path>
+											left();
+    1174:	0e 94 32 01 	call	0x264	; 0x264 <left>
+										stop();
+										ShaftCountLeft = 0;
+										flag = 0;		//flag set to 0(it will be again set to 1 only for the condition (010) left=white  middle=black right=white)
+									break;
+								case 0:							//0 stands for left
+									while( (!L) )
+    1178:	80 91 64 02 	lds	r24, 0x0264
+    117c:	90 91 65 02 	lds	r25, 0x0265
+    1180:	00 97       	sbiw	r24, 0x00	; 0
+    1182:	b1 f3       	breq	.-20     	; 0x1170 <main+0x7ae>
+										{
+											Read_path();
+											left();
+										}
+										last_reading ='r';
+    1184:	e0 92 00 02 	sts	0x0200, r14
+										PORTA = 0b01001110;
+    1188:	b2 b8       	out	0x02, r11	; 2
+    118a:	ef ef       	ldi	r30, 0xFF	; 255
+    118c:	ff e8       	ldi	r31, 0x8F	; 143
+    118e:	31 97       	sbiw	r30, 0x01	; 1
+    1190:	f1 f7       	brne	.-4      	; 0x118e <main+0x7cc>
+    1192:	00 c0       	rjmp	.+0      	; 0x1194 <main+0x7d2>
+    1194:	00 00       	nop
+										_delay_ms ( 10 ) ;
+										PORTA = 0b00000000;
+    1196:	12 b8       	out	0x02, r1	; 2
+										stop();
+    1198:	0e 94 7e 02 	call	0x4fc	; 0x4fc <stop>
+										ShaftCountLeft = 0;
+    119c:	10 92 0e 02 	sts	0x020E, r1
+    11a0:	10 92 0f 02 	sts	0x020F, r1
+    11a4:	10 92 10 02 	sts	0x0210, r1
+    11a8:	10 92 11 02 	sts	0x0211, r1
+										flag = 0;
+    11ac:	10 92 0d 02 	sts	0x020D, r1
+    11b0:	10 92 0c 02 	sts	0x020C, r1
+									break;
+    11b4:	5a c0       	rjmp	.+180    	; 0x126a <main+0x8a8>
+								case 2 :						//2 stands for rotating by 180 degrees.
+									//angle_rotate(9300);
+									Rotate_pie();
+    11b6:	0e 94 5e 03 	call	0x6bc	; 0x6bc <Rotate_pie>
+									flag = 0;
+    11ba:	10 92 0d 02 	sts	0x020D, r1
+    11be:	10 92 0c 02 	sts	0x020C, r1
+									break;
+    11c2:	53 c0       	rjmp	.+166    	; 0x126a <main+0x8a8>
+								case 5:
+									Rotate_pie();
+    11c4:	0e 94 5e 03 	call	0x6bc	; 0x6bc <Rotate_pie>
+									flag = 0;
+    11c8:	10 92 0d 02 	sts	0x020D, r1
+    11cc:	10 92 0c 02 	sts	0x020C, r1
+									break;
+    11d0:	4c c0       	rjmp	.+152    	; 0x126a <main+0x8a8>
+								case 3:						//3 stands for ringing the buzzer.
+									//delay_ms(1000);
+									i++ ;
+    11d2:	c9 01       	movw	r24, r18
+    11d4:	01 96       	adiw	r24, 0x01	; 1
+    11d6:	90 93 13 02 	sts	0x0213, r25
+    11da:	80 93 12 02 	sts	0x0212, r24
+									if(data[i] == 6)
+    11de:	8c 0f       	add	r24, r28
+    11e0:	9d 1f       	adc	r25, r29
+    11e2:	dc 01       	movw	r26, r24
+    11e4:	8c 91       	ld	r24, X
+    11e6:	86 30       	cpi	r24, 0x06	; 6
+    11e8:	91 f4       	brne	.+36     	; 0x120e <main+0x84c>
+Input :			None
+Output :		Makes the bot to execute all the instructions.
+Logic :			It takes the instruction array by using the uart_rx function and iterates through the instruction and executes it.
+Example Call :  Called automatically by the OS.
+*/
+int main(void)
+    11ea:	f9 01       	movw	r30, r18
+    11ec:	e0 5e       	subi	r30, 0xE0	; 224
+    11ee:	fd 4f       	sbci	r31, 0xFD	; 253
+    11f0:	cf 01       	movw	r24, r30
+    11f2:	8e 51       	subi	r24, 0x1E	; 30
+    11f4:	92 40       	sbci	r25, 0x02	; 2
+								case 3:						//3 stands for ringing the buzzer.
+									//delay_ms(1000);
+									i++ ;
+									if(data[i] == 6)
+									{
+										while(data[i] == 6)
+    11f6:	21 91       	ld	r18, Z+
+    11f8:	26 30       	cpi	r18, 0x06	; 6
+    11fa:	d1 f3       	breq	.-12     	; 0x11f0 <main+0x82e>
+    11fc:	90 93 13 02 	sts	0x0213, r25
+    1200:	80 93 12 02 	sts	0x0212, r24
+    1204:	10 93 07 02 	sts	0x0207, r17
+    1208:	00 93 06 02 	sts	0x0206, r16
+    120c:	04 c0       	rjmp	.+8      	; 0x1216 <main+0x854>
+											i++;
+										}
+									}
+									else
+									{
+										slow_flag = 0;
+    120e:	10 92 07 02 	sts	0x0207, r1
+    1212:	10 92 06 02 	sts	0x0206, r1
+    1216:	8f ef       	ldi	r24, 0xFF	; 255
+    1218:	9f e7       	ldi	r25, 0x7F	; 127
+    121a:	a4 e0       	ldi	r26, 0x04	; 4
+    121c:	81 50       	subi	r24, 0x01	; 1
+    121e:	90 40       	sbci	r25, 0x00	; 0
+    1220:	a0 40       	sbci	r26, 0x00	; 0
+    1222:	e1 f7       	brne	.-8      	; 0x121c <main+0x85a>
+    1224:	00 c0       	rjmp	.+0      	; 0x1226 <main+0x864>
+    1226:	00 00       	nop
+									}
+									//PORTB = 0b00000001;
+									_delay_ms(100);
+									//PORTB = 0b00000000;
+									flag = 0; 
+    1228:	10 92 0d 02 	sts	0x020D, r1
+    122c:	10 92 0c 02 	sts	0x020C, r1
+									Pebble_pick_n_drop( 150 );
+    1230:	86 e9       	ldi	r24, 0x96	; 150
+    1232:	90 e0       	ldi	r25, 0x00	; 0
+    1234:	0e 94 10 04 	call	0x820	; 0x820 <Pebble_pick_n_drop>
+									break;
+    1238:	18 c0       	rjmp	.+48     	; 0x126a <main+0x8a8>
+						
+								case 4:						//All instructions have been executed
+										PORTB = 0b00000001;
+    123a:	81 e0       	ldi	r24, 0x01	; 1
+    123c:	85 b9       	out	0x05, r24	; 5
+    123e:	8f ef       	ldi	r24, 0xFF	; 255
+    1240:	9f ef       	ldi	r25, 0xFF	; 255
+    1242:	a0 ee       	ldi	r26, 0xE0	; 224
+    1244:	81 50       	subi	r24, 0x01	; 1
+    1246:	90 40       	sbci	r25, 0x00	; 0
+    1248:	a0 40       	sbci	r26, 0x00	; 0
+    124a:	e1 f7       	brne	.-8      	; 0x1244 <main+0x882>
+    124c:	00 c0       	rjmp	.+0      	; 0x124e <main+0x88c>
+    124e:	00 00       	nop
+										_delay_ms(5000);
+										PORTB = 0b00000000;									
+    1250:	15 b8       	out	0x05, r1	; 5
+				}
+			}
+		}	
+	}
+	return 0;
+    1252:	df 91       	pop	r29
+    1254:	cf 91       	pop	r28
+    1256:	1f 91       	pop	r17
+    1258:	0f 91       	pop	r16
+    125a:	ff 90       	pop	r15
+    125c:	ef 90       	pop	r14
+    125e:	df 90       	pop	r13
+    1260:	cf 90       	pop	r12
+    1262:	bf 90       	pop	r11
+    1264:	af 90       	pop	r10
+    1266:	9f 90       	pop	r9
+    1268:	08 95       	ret
+				}
+				*/
+				
+				if ((!L)&&(!M)&&(!R))		//000for the condition : left=white  middle=white right=white
+				{
+					while((!L)&&(!M)&&(!R))
+    126a:	80 91 64 02 	lds	r24, 0x0264
+    126e:	90 91 65 02 	lds	r25, 0x0265
+    1272:	00 97       	sbiw	r24, 0x00	; 0
+    1274:	69 f4       	brne	.+26     	; 0x1290 <main+0x8ce>
+    1276:	80 91 68 02 	lds	r24, 0x0268
+    127a:	90 91 69 02 	lds	r25, 0x0269
+    127e:	00 97       	sbiw	r24, 0x00	; 0
+    1280:	39 f4       	brne	.+14     	; 0x1290 <main+0x8ce>
+    1282:	80 91 66 02 	lds	r24, 0x0266
+    1286:	90 91 67 02 	lds	r25, 0x0267
+    128a:	00 97       	sbiw	r24, 0x00	; 0
+    128c:	09 f4       	brne	.+2      	; 0x1290 <main+0x8ce>
+    128e:	6c ce       	rjmp	.-808    	; 0xf68 <main+0x5a6>
+						}
+						PORTJ = 0b11110111 & PORTJ;
+						*/
+					}
+					
+					f = 0 ;
+    1290:	10 92 0b 02 	sts	0x020B, r1
+    1294:	10 92 0a 02 	sts	0x020A, r1
+    1298:	79 cc       	rjmp	.-1806   	; 0xb8c <main+0x1ca>
+							Read_path();
+							forward() ;						
+						}
+					}					
+				}
+				if( ((L)&&(M)&&(!R)) /*&& ( ShaftCountLeft <= 200)*/ ) 			//(110)for the condition : left=black  middle=black right=white (take left)
+    129a:	80 91 66 02 	lds	r24, 0x0266
+    129e:	90 91 67 02 	lds	r25, 0x0267
+    12a2:	00 97       	sbiw	r24, 0x00	; 0
+    12a4:	09 f4       	brne	.+2      	; 0x12a8 <main+0x8e6>
+    12a6:	c5 cc       	rjmp	.-1654   	; 0xc32 <main+0x270>
+    12a8:	08 c0       	rjmp	.+16     	; 0x12ba <main+0x8f8>
+						Read_path();
+						forward() ;
+					}
+				}
+				
+				if( ((L)&&(!M)&&(!R)) /*&& ( ShaftCountLeft <= 200)*/ )			//(100)for the condition : left=black  middle=white right=white
+    12aa:	80 91 66 02 	lds	r24, 0x0266
+    12ae:	90 91 67 02 	lds	r25, 0x0267
+    12b2:	00 97       	sbiw	r24, 0x00	; 0
+    12b4:	09 f4       	brne	.+2      	; 0x12b8 <main+0x8f6>
+    12b6:	4b cd       	rjmp	.-1386   	; 0xd4e <main+0x38c>
+    12b8:	69 cc       	rjmp	.-1838   	; 0xb8c <main+0x1ca>
+						goto x ;
+					}
+					
+					
+				}
+				else if (((L)&&(M)&&(!R)) /*&& ( ShaftCountLeft > 200)*/ ) 
+    12ba:	80 91 66 02 	lds	r24, 0x0266
+    12be:	90 91 67 02 	lds	r25, 0x0267
+    12c2:	00 97       	sbiw	r24, 0x00	; 0
+    12c4:	09 f4       	brne	.+2      	; 0x12c8 <main+0x906>
+    12c6:	f9 cc       	rjmp	.-1550   	; 0xcba <main+0x2f8>
+    12c8:	61 cc       	rjmp	.-1854   	; 0xb8c <main+0x1ca>
+
+000012ca <_exit>:
+    12ca:	f8 94       	cli
+
+000012cc <__stop_program>:
+    12cc:	ff cf       	rjmp	.-2      	; 0x12cc <__stop_program>
