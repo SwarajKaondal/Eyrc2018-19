@@ -9,5 +9,5 @@
 This project was developed for the Eyantra Robotics Competition organized by IIT Mumbai. The challenge involved building a robot that could navigate a hexagonal map (as demonstrated in the video below) and transport small magnetic balls from one hexagon to another. The theme was inspired by the story of the thirsty crow, where a crow drops pebbles into a container to raise the water level and drink. Additionally, the project incorporated Augmented Reality to illustrate this story, with the robot acting as the crow, moving pebbles between locations.
 
 ## Project Video
+https://github.com/user-attachments/assets/c85c1df9-18ce-4621-96ee-ec8b2624526b
 
-[Watch the project video](Video.mp4)
